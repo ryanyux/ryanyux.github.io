@@ -99,7 +99,7 @@
     "keywords": ["线性DP"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "181"
+    "wordCount": "190"
   }]
   </script>
 
@@ -591,7 +591,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-09-01 16:01:55 &#43;0800 CST">1 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>181 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-09-01 16:01:55 &#43;0800 CST">1 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>190 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/leetcode/10.md" title="views">0</span> 
     
@@ -700,7 +700,48 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分析">分析</a></li>
+    <li><a href="#情况1-">情况1: &ldquo;.&rdquo;</a></li>
+    <li><a href="#情况2-">情况2: &ldquo;*&rdquo;</a></li>
+    <li><a href="#情况3-普通字母">情况3: 普通字母</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分析">分析</a></li>
+    <li><a href="#情况1-">情况1: &ldquo;.&rdquo;</a></li>
+    <li><a href="#情况2-">情况2: &ldquo;*&rdquo;</a></li>
+    <li><a href="#情况3-普通字母">情况3: 普通字母</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -736,13 +777,13 @@
 
         <div class="max-w-prose mb-20">
           <div id="分析" class="anchor"></div>
-<h1 class="relative group">分析 
+<h2 class="relative group">分析 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e5%88%86%e6%9e%90" aria-label="Anchor">#</a></span>        
     
-</h1>
+</h2>
 <p>对于p中的字符, 可能出现3种情况: 小写字母, &lsquo;.&rsquo;, &lsquo;*&rsquo;</p>
 <p>由于&quot;*&ldquo;可以匹配0个或者多个字符, 所以对于p中的某一个子串, 在s中可能有多个匹配的子串. 例如&quot;a*b&rdquo; 和 &ldquo;b&rdquo;, &ldquo;ab&rdquo;, &ldquo;aab&quot;都匹配.</p>
 <p>因此, 需要将可能的匹配结果都记录下来. 我们在p中从前往后匹配, 并记录p中的前i个字符在s中的匹配情况.</p>
@@ -758,7 +799,15 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      <span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="kc">False</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">np</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
 </span></span><span class="line"><span class="cl">      <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-</span></span></code></pre></div><p>现在,根据p中出现的字符串来进行相应的判断.</p>
+</span></span></code></pre></div><div id="情况1-" class="anchor"></div>
+<h2 class="relative group">情况1: &ldquo;.&rdquo; 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%83%85%e5%86%b51-" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>现在,根据p中出现的字符串来进行相应的判断.</p>
 <p>如果p[i-1] 是&rsquo;.&rsquo;, 那么可以看p[:i-1]和哪些字符串匹配. p[:i-1]的匹配情况保存在dp[i-1]中, 通过遍历发现了所有的匹配字符串, p[i-1]只需与后一个字符匹配即可.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">			<span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -766,7 +815,15 @@
 </span></span><span class="line"><span class="cl">              <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">                  <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">                      <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-</span></span></code></pre></div><p>如果p[i-1] 是&rsquo;*&rsquo;, 表达的是<code>p[i-2]出现0次或者多次</code>. 因此我们需要看<code>p[:i-3]</code>的匹配情况, 然后让p[i-2]和<code>p[:i-3]匹配成功的字符串后面的字符</code>进行匹配.p[:i-3]的匹配情况保存在dp[i-2]中, 我们对其进行遍历.</p>
+</span></span></code></pre></div><div id="情况2-" class="anchor"></div>
+<h2 class="relative group">情况2: &ldquo;*&rdquo; 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%83%85%e5%86%b52-" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>如果p[i-1] 是&rsquo;*&rsquo;, 表达的是<code>p[i-2]出现0次或者多次</code>. 因此我们需要看<code>p[:i-3]</code>的匹配情况, 然后让p[i-2]和<code>p[:i-3]匹配成功的字符串后面的字符</code>进行匹配.p[:i-3]的匹配情况保存在dp[i-2]中, 我们对其进行遍历.</p>
 <p>dp[i-2][j]表示<code>p[:i-1]</code>和<code>s[j+1]</code>匹配, 由于&rsquo;*&lsquo;可以匹配0个字符, 因此p[:i+2]也和s[j+1]匹配, 所以dp[i][j] = True.</p>
 <p>如果&rsquo;*&rsquo; 之前出现的是&rsquo;.&rsquo; , 那么就可以匹配任意多个的任意字符</p>
 <p>如果&rsquo;*&lsquo;之前出现的是普通的小写字母, 那就需要这个字符重复的出现</p>
@@ -784,7 +841,15 @@
 </span></span><span class="line"><span class="cl">                              <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </span></span><span class="line"><span class="cl">                          <span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">                              <span class="k">break</span>
-</span></span></code></pre></div><p>如果p[i-1]是普通的字母, 正常匹配即可</p>
+</span></span></code></pre></div><div id="情况3-普通字母" class="anchor"></div>
+<h2 class="relative group">情况3: 普通字母 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%83%85%e5%86%b53-%e6%99%ae%e9%80%9a%e5%ad%97%e6%af%8d" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>如果p[i-1]是普通的字母, 正常匹配即可</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">          <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">              <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="ow">and</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
@@ -898,9 +963,7 @@
     
     
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
-      &copy;
-      2023
-      Ryan
+      Copy, <em>right?</em> 🤔
     </p>
     
 
