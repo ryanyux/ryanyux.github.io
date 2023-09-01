@@ -7,9 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 Ryan</copyright>
-    <lastBuildDate>Thu, 31 Aug 2023 17:19:56 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2023 16:01:55 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>有效的括号字符串</title>
+      <title>10. 正则表达式匹配</title>
+      <link>https://ryanyux.github.io/posts/leetcode/10/</link>
+      <pubDate>Fri, 01 Sep 2023 16:01:55 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/leetcode/10/</guid>
+      <description>分析 # 对于p中的字符, 可能出现3种情况: 小写字母, &amp;lsquo;.</description>
+      
+    </item>
+    
+    <item>
+      <title>678.有效的括号字符串</title>
       <link>https://ryanyux.github.io/posts/leetcode/678/</link>
       <pubDate>Thu, 31 Aug 2023 17:19:56 +0800</pubDate>
       

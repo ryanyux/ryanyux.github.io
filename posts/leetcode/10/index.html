@@ -8,16 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Posts &middot; Ryan&#39;s blog</title>
-  <meta name="title" content="Posts &middot; Ryan&#39;s blog" />
+  <title>10. 正则表达式匹配 &middot; Ryan&#39;s blog</title>
+  <meta name="title" content="10. 正则表达式匹配 &middot; Ryan&#39;s blog" />
   
   
+  <meta name="keywords" content="线性DP, " />
   
   
-  
-  <link rel="canonical" href="https://ryanyux.github.io/posts/" />
-  
-  <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Ryan's blog" />
+  <link rel="canonical" href="https://ryanyux.github.io/posts/leetcode/10/" />
   
   
   
@@ -63,18 +61,48 @@
   
   
   
-  <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ryanyux.github.io/posts/" />
+  <meta property="og:title" content="10. 正则表达式匹配" />
+<meta property="og:description" content="分析 # 对于p中的字符, 可能出现3种情况: 小写字母, &lsquo;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ryanyux.github.io/posts/leetcode/10/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-01T16:01:55+08:00" />
+<meta property="article:modified_time" content="2023-09-01T16:01:55+08:00" />
+<meta property="og:see_also" content="https://ryanyux.github.io/posts/leetcode/678/" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="10. 正则表达式匹配"/>
+<meta name="twitter:description" content="分析 # 对于p中的字符, 可能出现3种情况: 小写字母, &lsquo;."/>
 
   
-  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "10. 正则表达式匹配",
+    "headline": "10. 正则表达式匹配",
+    
+    "abstract": "分析 # 对于p中的字符, 可能出现3种情况: 小写字母, \u0026lsquo;.",
+    "inLanguage": "en",
+    "url" : "https:\/\/ryanyux.github.io\/posts\/leetcode\/10\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Ryan"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-09-01T16:01:55\u002b08:00",
+    "datePublished": "2023-09-01T16:01:55\u002b08:00",
+    
+    "dateModified": "2023-09-01T16:01:55\u002b08:00",
+    
+    "keywords": ["线性DP"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "181"
+  }]
+  </script>
+
 
   
   
@@ -437,10 +465,13 @@
       
 
 
-
-
-
-
+<article>
+  
+  
+  
+  
+  
+  
 
 
 <div id="hero" class="h-[150px] md:h-[200px]"></div>
@@ -468,11 +499,74 @@
     });
 </script>
 
- <header>
   
-  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Posts</h1>
-  <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
     
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >Ryan&#39;s blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/leetcode/10/"
+      >10. 正则表达式匹配</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      10. 正则表达式匹配
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -497,323 +591,305 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
+  <time datetime="2023-09-01 16:01:55 &#43;0800 CST">1 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>181 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="views_posts/leetcode/10.md" title="views">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="likes_posts/leetcode/10.md" title="likes">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span><span class="px-2 text-primary-500">&middot;</span><span>
+    <button id="likes_button"
+        class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+        onclick="process_article()">
+        <span id="likes_button_heart" style="display:none" class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+ </span>
+        <span id="likes_button_emtpty_heart" class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+  </span>
+
+</span>
+        <span id="likes_button_text">&nbsp;Like</span>
+    </button>
+</span>
+  
+
+  
+  
 </div>
 
 
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+<div class="flex">
+  
+  
+  
+  
+  <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+    alt="Ryan" src="/img/blowfish_logo.png" />
+  
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Ryan
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
   </div>
-  <script>
-    var oid = "views_"
-    var oid_likes = "likes_"
-  </script>
+</div>
+    
+
+    
+    
+    
+
+    
+
+    
+    <div class="mb-5"></div>
+    
   
-  
-  <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
   </header>
-  <section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    <div class="min-w-0 min-h-0 max-w-prose">
-      
+    
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5" >
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        leetcode - This article is part of a series.
+    </summary>
+    
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part : This Article
     </div>
-   
-
-
-
-  </section>
-  
-
     
     
     
-
-    
-
-    <section class="space-y-10 w-full">
-      
-      
-      <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-        2021
-      </h2>
-      
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/posts/paperreading/mrte/">
-    
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/background.jpg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/paperreading/mrte/">(ICNP'20) A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering 阅读笔记</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2021-11-03 21:30:52 &#43;0800 CST">3 November 2021</time><span class="px-2 text-primary-500">&middot;</span><span>118 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_posts/paperreading/MRTE.md" title="views">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_posts/paperreading/MRTE.md" title="likes">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-      </div>
-      
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="https://ryanyux.github.io/posts/leetcode/678/">
+            Part : 678.有效的括号字符串
+        </a>
     </div>
-  </a>
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/posts/drl/">
     
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/background.jpg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/drl/">Deep Reinforce Learning强化学习笔记</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2021-10-25 12:45:53 &#43;0800 CST">25 October 2021</time><span class="px-2 text-primary-500">&middot;</span><span>130 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_posts/DRL.md" title="views">0</span> 
+
+</details>
+
+
+
+        <div class="max-w-prose mb-20">
+          <div id="分析" class="anchor"></div>
+<h1 class="relative group">分析 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%88%86%e6%9e%90" aria-label="Anchor">#</a></span>        
     
-    <span class="inline-block align-text-bottom">
+</h1>
+<p>对于p中的字符, 可能出现3种情况: 小写字母, &lsquo;.&rsquo;, &lsquo;*&rsquo;</p>
+<p>由于&quot;*&ldquo;可以匹配0个或者多个字符, 所以对于p中的某一个子串, 在s中可能有多个匹配的子串. 例如&quot;a*b&rdquo; 和 &ldquo;b&rdquo;, &ldquo;ab&rdquo;, &ldquo;aab&quot;都匹配.</p>
+<p>因此, 需要将可能的匹配结果都记录下来. 我们在p中从前往后匹配, 并记录p中的前i个字符在s中的匹配情况.</p>
+<p>我们用二维数组dp来记录匹配情况, dp[i][j]如果是True, 则表示字符<code>p[:i+1]</code>和<code>s[:j+1]</code>匹配.</p>
+<p>为了方便, 我们先记录空字符串和空字符串的匹配情况. 因此dp的第一维长度是len(p)+1 , 第二维长度是len(s)+1. 由于<code>空字符串和空字符串是可以匹配的</code>, 所以dp[0][0]为True.</p>
+<blockquote>
+<p>由于dp在每一维都增加了1, 因此对于dp[i][j], 与之匹配的字符是p[i-1] 和s[j-1]</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">isMatch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ns</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">np</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="n">dp</span> <span class="o">=</span> <span class="p">[[</span><span class="kc">False</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">np</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span></code></pre></div><p>现在,根据p中出现的字符串来进行相应的判断.</p>
+<p>如果p[i-1] 是&rsquo;.&rsquo;, 那么可以看p[:i-1]和哪些字符串匹配. p[:i-1]的匹配情况保存在dp[i-1]中, 通过遍历发现了所有的匹配字符串, p[i-1]只需与后一个字符匹配即可.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">			<span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;.&#34;</span><span class="p">:</span> <span class="c1">#能够跟在前一个字符匹配的后面</span>
+</span></span><span class="line"><span class="cl">              <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                  <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                      <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span></code></pre></div><p>如果p[i-1] 是&rsquo;*&rsquo;, 表达的是<code>p[i-2]出现0次或者多次</code>. 因此我们需要看<code>p[:i-3]</code>的匹配情况, 然后让p[i-2]和<code>p[:i-3]匹配成功的字符串后面的字符</code>进行匹配.p[:i-3]的匹配情况保存在dp[i-2]中, 我们对其进行遍历.</p>
+<p>dp[i-2][j]表示<code>p[:i-1]</code>和<code>s[j+1]</code>匹配, 由于&rsquo;*&lsquo;可以匹配0个字符, 因此p[:i+2]也和s[j+1]匹配, 所以dp[i][j] = True.</p>
+<p>如果&rsquo;*&rsquo; 之前出现的是&rsquo;.&rsquo; , 那么就可以匹配任意多个的任意字符</p>
+<p>如果&rsquo;*&lsquo;之前出现的是普通的小写字母, 那就需要这个字符重复的出现</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="k">elif</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;*&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">              <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># 匹配0个</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">pre</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                  <span class="k">if</span> <span class="n">pre</span> <span class="o">==</span> <span class="s2">&#34;.&#34;</span><span class="p">:</span> <span class="c1"># 如果前一个是&#39;.&#39; 那么就可以匹配任意多的任意字符</span>
+</span></span><span class="line"><span class="cl">                      <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">ns</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">                  <span class="k">else</span><span class="p">:</span>                  
+</span></span><span class="line"><span class="cl">                      <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">ns</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                          <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">pre</span><span class="p">:</span> <span class="c1"># *号必须重复之前的字符</span>
+</span></span><span class="line"><span class="cl">                              <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">                          <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                              <span class="k">break</span>
+</span></span></code></pre></div><p>如果p[i-1]是普通的字母, 正常匹配即可</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">	<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">              <span class="k">if</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="ow">and</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>   
+</span></span></code></pre></div><p>由于问题是在问p能否和s匹配, 也就是p[: len(p)+1]和s[:len(s)+1]是否匹配. 因此答案就是dp[len(p)][len(s)]也就是dp[-1][-1].</p>
 
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
+        </div>
+                
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        leetcode - This article is part of a series.
+    </summary>
     
-    <span id="likes_posts/DRL.md" title="likes">0</span> 
     
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-      </div>
-      
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part : This Article
     </div>
-  </a>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="https://ryanyux.github.io/posts/leetcode/678/">
+            Part : 678.有效的括号字符串
+        </a>
+    </div>
+    
+    
+
+</details>
+
+
+        
+
+          
+      </div>
+     
+     <script>
+        var oid = "views_posts\/leetcode\/10.md"
+        var oid_likes = "likes_posts\/leetcode\/10.md"
+      </script>
       
       
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
+  
     </section>
+  <footer class="pt-8 max-w-prose print:hidden">
 
     
-
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/leetcode/678/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >678.有效的括号字符串</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-08-31 17:19:56 &#43;0800 CST">31 August 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
   
 
-    <ul class="flex flex-row mt-8 justify-center">
-    <li>
-      <a
-          href="/posts/page/2/"
-          class="mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          rel="prev"
-      >&larr;</a>
-    </li>
-    <li>
-          <a
-              href="/posts/"
-              class=" mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          >1</a>
-      </li><li>
-          <a
-              href="/posts/page/2/"
-              class=" mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          >2</a>
-      </li><li>
-          <a
-              href="/posts/page/3/"
-              class="
-          bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
-         mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          >3</a>
-      </li>
-  </ul>
 
-  
-      
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
