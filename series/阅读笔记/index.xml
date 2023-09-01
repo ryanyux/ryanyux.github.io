@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>阅读笔记 on Blowfish</title>
+    <link>https://ryanyux.github.io/series/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 阅读笔记 on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Sat, 03 Dec 2022 13:54:17 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/series/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[TON&#39;21] FlexDATE: Flexible and Disturbance-Aware Traffic Engineering With Reinforcement Learning in Software-Defined Networks思路记录</title>
+      <link>https://ryanyux.github.io/posts/paperreading/flexdate/</link>
+      <pubDate>Sat, 03 Dec 2022 13:54:17 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/flexdate/</guid>
+      <description>新的指标 # 不同于以往的以最大链路利用(Max Link Utilization, MLU)作为指标的方式.</description>
+      
+    </item>
+    
+    <item>
+      <title>[IWQoS&#39;21]DarkTE: Towards Dark Traffic Engineering in Data Center Networks with Ensemble Learning</title>
+      <link>https://ryanyux.github.io/posts/paperreading/darkte/</link>
+      <pubDate>Tue, 25 Oct 2022 11:59:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/darkte/</guid>
+      <description>1 背景 # mice流： 通常大小只有几KB的流 elephant流： 数据量很大，可以达到几个GB 1.</description>
+      
+    </item>
+    
+    <item>
+      <title>(INFOCOM&#39;21)DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/drlor/</link>
+      <pubDate>Wed, 10 Nov 2021 15:20:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/drlor/</guid>
+      <description>针对的问题 # 在传统的网络路由的算法中，路由对flow的处理方式通常是基于最短的跳数或者是链路的权重来计算如何路由，但是这种方式并不能对不同类型的flow进行区别对待。在 DRL-OR文章中，作者提出了4种基本的flow的类型，如下所示。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

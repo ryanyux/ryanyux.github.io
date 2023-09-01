@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/</link>
+    <description>Recent content in Categories on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Sun, 21 Aug 2022 14:16:05 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scapy</title>
+      <link>https://ryanyux.github.io/categories/scapy/</link>
+      <pubDate>Sun, 21 Aug 2022 14:16:05 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/scapy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Graph Neural Network</title>
+      <link>https://ryanyux.github.io/categories/graph-neural-network/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/graph-neural-network/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://ryanyux.github.io/categories/reinforcement-learning/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/reinforcement-learning/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Traffic Engineering</title>
+      <link>https://ryanyux.github.io/categories/traffic-engineering/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/traffic-engineering/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>阅读笔记</title>
+      <link>https://ryanyux.github.io/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>GNN</title>
+      <link>https://ryanyux.github.io/categories/gnn/</link>
+      <pubDate>Tue, 29 Mar 2022 14:26:29 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/gnn/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Greedy Algorithm</title>
+      <link>https://ryanyux.github.io/categories/greedy-algorithm/</link>
+      <pubDate>Mon, 28 Mar 2022 10:43:42 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/greedy-algorithm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Software Defined Network</title>
+      <link>https://ryanyux.github.io/categories/software-defined-network/</link>
+      <pubDate>Tue, 22 Mar 2022 14:08:19 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/software-defined-network/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data Center</title>
+      <link>https://ryanyux.github.io/categories/data-center/</link>
+      <pubDate>Mon, 14 Mar 2022 10:02:55 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/data-center/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Multipathing</title>
+      <link>https://ryanyux.github.io/categories/multipathing/</link>
+      <pubDate>Mon, 14 Mar 2022 10:02:55 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/multipathing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Routing</title>
+      <link>https://ryanyux.github.io/categories/routing/</link>
+      <pubDate>Fri, 04 Mar 2022 10:49:33 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/routing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Multicast</title>
+      <link>https://ryanyux.github.io/categories/multicast/</link>
+      <pubDate>Fri, 25 Feb 2022 09:50:04 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/multicast/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SRv6</title>
+      <link>https://ryanyux.github.io/categories/srv6/</link>
+      <pubDate>Mon, 06 Dec 2021 17:05:58 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/srv6/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>PPO</title>
+      <link>https://ryanyux.github.io/categories/ppo/</link>
+      <pubDate>Wed, 10 Nov 2021 15:20:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/ppo/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>DDPG</title>
+      <link>https://ryanyux.github.io/categories/ddpg/</link>
+      <pubDate>Wed, 03 Nov 2021 21:30:52 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/categories/ddpg/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

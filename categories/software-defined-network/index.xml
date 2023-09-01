@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Defined Network on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/software-defined-network/</link>
+    <description>Recent content in Software Defined Network on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Tue, 22 Mar 2022 14:08:19 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/software-defined-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SOSR&#39;21]Helix: Traffic Engineering for Multi-Controller SDN 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/helix/</link>
+      <pubDate>Tue, 22 Mar 2022 14:08:19 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/helix/</guid>
+      <description>1、文章背景 # 在目前的多控制器SDN中(MCSDN)，需要去维护多个控制器之间的一致性。如果是要维护强一致性(strong consistency)就需要产生大量的开销，而如果使用最终一致性(eventual consistency )则可能会导致controller基于过时的信息来作出决定。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

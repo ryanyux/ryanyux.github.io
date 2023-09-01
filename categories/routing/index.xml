@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Routing on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/routing/</link>
+    <description>Recent content in Routing on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Fri, 04 Mar 2022 10:49:33 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/routing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[INFOCOM&#39;21]Primus: Fast and Robust Centralized Routing for Large-scale Data Center Networks 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/primus/</link>
+      <pubDate>Fri, 04 Mar 2022 10:49:33 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/primus/</guid>
+      <description>背景 # 文章的主要目的在于目前的数据中心网络(DCN, Data Center Network)中路由的一些问题。</description>
+      
+    </item>
+    
+    <item>
+      <title>(INFOCOM&#39;21)DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/drlor/</link>
+      <pubDate>Wed, 10 Nov 2021 15:20:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/drlor/</guid>
+      <description>针对的问题 # 在传统的网络路由的算法中，路由对flow的处理方式通常是基于最短的跳数或者是链路的权重来计算如何路由，但是这种方式并不能对不同类型的flow进行区别对待。在 DRL-OR文章中，作者提出了4种基本的flow的类型，如下所示。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

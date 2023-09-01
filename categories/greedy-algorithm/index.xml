@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greedy Algorithm on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/greedy-algorithm/</link>
+    <description>Recent content in Greedy Algorithm on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Mon, 28 Mar 2022 10:43:42 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/greedy-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[NSDI&#39;21]Cost-Effective Cloud Edge Traffic Engineering with CASCARA 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/cascara/</link>
+      <pubDate>Mon, 28 Mar 2022 10:43:42 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/cascara/</guid>
+      <description>1、背景 # 在目前的云方案中，每个云有很多个出口节点，连接不同的ISP。每个ISP根据链路的使用量来进行计费。具体的计费方式如下：</description>
+      
+    </item>
+    
+  </channel>
+</rss>

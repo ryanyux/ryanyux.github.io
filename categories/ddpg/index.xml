@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DDPG on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/ddpg/</link>
+    <description>Recent content in DDPG on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Wed, 03 Nov 2021 21:30:52 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/ddpg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(ICNP&#39;20) A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/mrte/</link>
+      <pubDate>Wed, 03 Nov 2021 21:30:52 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/mrte/</guid>
+      <description>基本思路 # 在现在的基于深度强化学习(Deep Reinforcement Learning,DRL)模型的流量工程(Traffic Engineering,TE)中，我们需要让AI来学习网络中的某些特征，并实现对网络中的流量有一个合理的调度,让整个网络的总体有个好的性能。 文章通过DRL来学习如何让flow在不同的路径(path)中有一个合理的分配比例，从而提高网络性能。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

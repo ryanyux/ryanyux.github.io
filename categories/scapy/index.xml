@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scapy on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/scapy/</link>
+    <description>Recent content in Scapy on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Sun, 21 Aug 2022 14:16:05 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/scapy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用Scapy从raw bytes中提取自定义Header?</title>
+      <link>https://ryanyux.github.io/posts/extractheader/</link>
+      <pubDate>Sun, 21 Aug 2022 14:16:05 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/extractheader/</guid>
+      <description>How to extract custom header from raw bytes using Scapy # 自定义协议 # 有些时候，需要构造一些自定义的协议以完成某些功能。但是这些协议不属于Scapy中已知协议的一部分，因此Scapy无法自动的将数据流中的raw bytes解析为已知的协议。因此，需要经过一些手动的步骤来完成解析。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

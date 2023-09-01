@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph Neural Network on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/graph-neural-network/</link>
+    <description>Recent content in Graph Neural Network on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Mon, 11 Apr 2022 15:49:59 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/graph-neural-network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[ICNP&#39;21] Is Machine Learning Ready for Traffic Engineering Optimization? 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/marlgnn/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/marlgnn/</guid>
+      <description>文章背景 # 目前的TE解决方案中，比较常见的方式是预先计算节点到节点之间的多条路径，然后在这些路径上调整分流比例。而该文章中，作者采用的方式则是与OSPF进行结合。文章提出的方法是通过强化学习 + GNN的方式来调整链路的权重，然后让OSPF按照自己的方式，根据链路权重和Dijkstra算法来计算路径。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

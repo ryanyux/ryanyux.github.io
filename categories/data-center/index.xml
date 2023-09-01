@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Center on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/data-center/</link>
+    <description>Recent content in Data Center on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Mon, 14 Mar 2022 10:02:55 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/data-center/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[EuroSys&#39;14]WCMP: Weighted Cost Multipathing for Improved Fairness in Data Centers 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/wcmp/</link>
+      <pubDate>Mon, 14 Mar 2022 10:02:55 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/wcmp/</guid>
+      <description>1、文章背景 # ECMP的局限性 # 文章提出的WCMP算法就是基于多路径的ECMP算法的一些问题进行的改进。在ECMP算法中(图a)，从S10点到S12点会事先计算几条等价路径，然后把从S10点到S12点的所有流在这些路径上进行均匀的分配。 但是这样的做法有个问题：从S10到S20有两条链路，每条路径3个流，但是从S20到S12就只有一条链路，但上面却要挤6条流。不同link上流的数目差距很大。每个流能用的带宽下降，从而导致整体的性能下降。</description>
+      
+    </item>
+    
+    <item>
+      <title>[INFOCOM&#39;21]Primus: Fast and Robust Centralized Routing for Large-scale Data Center Networks 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/primus/</link>
+      <pubDate>Fri, 04 Mar 2022 10:49:33 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/primus/</guid>
+      <description>背景 # 文章的主要目的在于目前的数据中心网络(DCN, Data Center Network)中路由的一些问题。</description>
+      
+    </item>
+    
+    <item>
+      <title>[TON&#39;20] Elmo: Source Routed Multicast for Public Clouds 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/elmo/</link>
+      <pubDate>Fri, 25 Feb 2022 09:50:04 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/elmo/</guid>
+      <description>文章背景📝 # 多播 vs 单播 (Multicast vs Unicast) # 在某些需要将相同内容发送给多个接收者的时候，例如网络直播或者是视频会议，可以选择传统的一对一方式，把同一份内容分成多分，分别发送给多个接收者，既单播(Unicast)。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

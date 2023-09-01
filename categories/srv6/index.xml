@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SRv6 on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/srv6/</link>
+    <description>Recent content in SRv6 on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Mon, 06 Dec 2021 17:05:58 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/srv6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(TON&#39;20)Traffic Engineering in Partially Deployed Segment Routing Over IPv6 Network With Deep Reinforcement Learning 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/wa-srte/</link>
+      <pubDate>Mon, 06 Dec 2021 17:05:58 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/wa-srte/</guid>
+      <description>📝文章背景 # 跟 SRID中的情形类似，我们需要在网络的一些路由器中启用段路由的功能来实现流量工程(Traffic Engineering,TE)，也就是将链路的负荷在整个网络中进行分担。</description>
+      
+    </item>
+    
+    <item>
+      <title>(TON&#39;21)Optimal Deployment of SRv6 to Enable Network Interconnection Service阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/srid/</link>
+      <pubDate>Thu, 02 Dec 2021 09:34:54 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/srid/</guid>
+      <description>📝文章背景 # 目前，对于一些单位来说，如果要连接不同地区的网络一般有几个方法。一是租用专线，这样比较安全也比较贵。二是用 MPLS来建立VPN，但MPLS需要保存大量的信息。再者就是用IPSec来进行封装，但是不支持流量工程(在不同路径上分配流量，以避免某些链路过于拥塞)。 Fig.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

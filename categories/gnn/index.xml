@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNN on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/gnn/</link>
+    <description>Recent content in GNN on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Tue, 29 Mar 2022 14:26:29 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/gnn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[ICNP&#39;21]Federated Traffic Engineering with Supervised Learning in Multi-region Networks 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/fedte/</link>
+      <pubDate>Tue, 29 Mar 2022 14:26:29 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/fedte/</guid>
+      <description>1 文章背景 # 目前的Traffic Engineering主要有两种方式：中心式和分布式。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

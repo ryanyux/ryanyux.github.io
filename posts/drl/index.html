@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Deep Reinforce Learning强化学习笔记 &middot; Blowfish</title>
+  <meta name="title" content="Deep Reinforce Learning强化学习笔记 &middot; Blowfish" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://ryanyux.github.io/posts/drl/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.9eba0341661a0632f65b4731981ddcd2ce4b5b51abfe6350e3b4e4952c1670efbae8c73c96d4b1be0393c9477db964c72d70af5da949e99f5ae3008ddb0668f5.css"
+    integrity="sha512-nroDQWYaBjL2W0cxmB3c0s5LW1Gr/mNQ47TklSwWcO&#43;66Mc8ltSxvgOTyUd9uWTHLXCvXalJ6Z9a4wCN2wZo9Q==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.41e474f5d66052b313c33b8f56008afac498015b7472d0f2ab78e22c187405fdff125b6735973309e4743b6924ca8c575db297f464c42da8e30ef9daed3b050c.js"
+    integrity="sha512-QeR09dZgUrMTwzuPVgCK&#43;sSYAVt0ctDyq3jiLBh0Bf3/EltnNZczCeR0O2kkyoxXXbKX9GTELajjDvna7TsFDA==" data-copy="" data-copied=""></script>
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Deep Reinforce Learning强化学习笔记" />
+<meta property="og:description" content="基本模型 # 在机器学习的大类中，有一类学习过程需要和环境进行互动，在互动的过程中得到环境的反馈，而AI要做的事情就是通过学习来尽可能的得到更好的反馈。比如说让AI玩超级玛丽，在超级玛丽中，AI吃到金币得到好的反馈，碰到蘑菇怪🍄就会得到坏的反馈。而AI要做的就是学习如何看到一个画面的时候作出好的决定。其实过程和人类完游戏也差不多。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ryanyux.github.io/posts/drl/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-25T12:45:53+08:00" />
+<meta property="article:modified_time" content="2021-10-25T12:45:53+08:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deep Reinforce Learning强化学习笔记"/>
+<meta name="twitter:description" content="基本模型 # 在机器学习的大类中，有一类学习过程需要和环境进行互动，在互动的过程中得到环境的反馈，而AI要做的事情就是通过学习来尽可能的得到更好的反馈。比如说让AI玩超级玛丽，在超级玛丽中，AI吃到金币得到好的反馈，碰到蘑菇怪🍄就会得到坏的反馈。而AI要做的就是学习如何看到一个画面的时候作出好的决定。其实过程和人类完游戏也差不多。"/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Deep Reinforce Learning强化学习笔记",
+    "headline": "Deep Reinforce Learning强化学习笔记",
+    
+    "abstract": "基本模型 # 在机器学习的大类中，有一类学习过程需要和环境进行互动，在互动的过程中得到环境的反馈，而AI要做的事情就是通过学习来尽可能的得到更好的反馈。比如说让AI玩超级玛丽，在超级玛丽中，AI吃到金币得到好的反馈，碰到蘑菇怪🍄就会得到坏的反馈。而AI要做的就是学习如何看到一个画面的时候作出好的决定。其实过程和人类完游戏也差不多。",
+    "inLanguage": "en",
+    "url" : "https:\/\/ryanyux.github.io\/posts\/drl\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Your name here"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-10-25T12:45:53\u002b08:00",
+    "datePublished": "2021-10-25T12:45:53\u002b08:00",
+    
+    "dateModified": "2021-10-25T12:45:53\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "130"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Your name here" />
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Blowfish</a>
+
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Posts">
+        Blog
+    </p>
+</a>
+
+
+            
+            
+  <a href="/series/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Series">
+        Series
+    </p>
+</a>
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tags">
+        Tags
+    </p>
+</a>
+
+
+            
+            
+  <a href="https://github.com/nunocoracao/blowfish"  target="_blank"  class="flex items-center">
+    
+    <span  class="mr-1" >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+        GitHub
+    </p>
+</a>
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400 h-12"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button">
+                    <div class="flex items-center justify-center h-12 dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden h-12 dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" style="margin-right:5px">
+                <div class="flex items-center justify-center h-12 dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden h-12 dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Posts">
+            Blog
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/series/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Series">
+            Series
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Tags">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/nunocoracao/blowfish"  target="_blank"  class="flex items-center">
+        
+        <div  class="mr-2" >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+            GitHub
+        </p>
+    </a>
+</li>
+
+
+
+                    
+                    
+
+                </ul>
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Deep Reinforce Learning强化学习笔记
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2021-10-25 12:45:53 &#43;0800 CST">25 October 2021</time><span class="px-2 text-primary-500">&middot;</span><span>130 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+<div class="flex">
+  
+  
+  
+  
+  <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+    alt="Your name here" src="/img/blowfish_logo.png" />
+  
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Your name here
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about you</div>
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+    
+
+    
+    
+    
+
+    
+
+    
+    <div class="mb-5"></div>
+    
+  
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+    
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="max-w-prose mb-20">
+          <div id="基本模型" class="anchor"></div>
+<h1 class="relative group">基本模型 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%9f%ba%e6%9c%ac%e6%a8%a1%e5%9e%8b" aria-label="Anchor">#</a></span>        
+    
+</h1>
+<p>在机器学习的大类中，有一类学习过程需要和环境进行互动，在互动的过程中得到环境的反馈，而AI要做的事情就是通过学习来尽可能的得到更好的反馈。比如说让AI玩超级玛丽，在超级玛丽中，AI吃到金币得到好的反馈，碰到蘑菇怪🍄就会得到坏的反馈。而AI要做的就是学习如何看到一个画面的时候作出好的决定。其实过程和人类完游戏也差不多。</p>
+<div id="mdp模型" class="anchor"></div>
+<h2 class="relative group">MDP模型 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#mdp%e6%a8%a1%e5%9e%8b" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>当然机器不能直接以人类的方式学习，我们必须通过某种方法对问题建模，通过优化模型的参数来提高模型的效果。在DRL中，使用的基本模型是马尔可夫决策过程(MDP)。
+
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="/img/DRL/Markov_Decision_Process.png" alt="avatar" />
+      
+    </figure>
+  
+
+</p>
+<p>如图所示，图中的绿色圆圈代表的就是状态$state$,它代表整个MDP模型当前所处的状态。我们可以通过采取一些动作$action$来让状态之间是相互转换。在采取了某个动作以后，进入到的下一个状态也是不确定的，有一定的随机性。类比于马里奥中的例子，$state$就相当于我们AI看到的世界，有可能是像人类一样看见画面，也有可能看见的就是一堆描述游戏内状况的数据。而$action$相当于我们可以选择的动作，比如左走、右走、跳跃、什么都不做等。</p>
+<div id="奖励" class="anchor"></div>
+<h2 class="relative group">奖励 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%a5%96%e5%8a%b1" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>由于我们采取了动作，从而导致自身所处的环境变化，所以我们需要从环境中获得反馈，才知道自己所做的行为到底是好还是不好。这个反馈叫做奖励reward,记为$r$或者是$r(s,a)$。我们在作出一个行为以后就可以立即得到reward。在具体实现中，我们可以根据环境的某些属性的变化来量化这个reward，比如吃到金币就+100，死亡就-100，具体也没有一个标准。这部分的内容不在强化学习的内容中。</p>
+<p>但是如果我们只让AI取在乎当前的得失的话，那么AI就可能为了吃一个金币而掉到坑里死掉。所以我们需要让AI变得有远见，要考虑未来的奖励。由于过程的进行，我们的行为的效果会随着时间的推移而变小。类比马里奥中就是我现在跳一下可能会影响未来10秒钟的游戏进程，但对1分钟以后的游戏进程的影响已经微乎其微了。综合考虑，我们需要把<em>未来</em>的奖励reward也用来评判<em>当前</em>的行为。折扣回报公式如下</p>
+<blockquote>
+<p>$U_t=\sum_{k=t}^{\infty}\gamma^{k-t}r_k$</p>
+</blockquote>
+<div id="策略函数" class="anchor"></div>
+<h2 class="relative group">策略函数 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%ad%96%e7%95%a5%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>在强化学习中策略函数$\pi(a|s)$代表的是面对某一个状态$s$时我们采取各个动作的<em><strong>概率</strong></em>（这里的$a$并不是一个数值，而是一个n维的向量，n就是可以采取的action的数目，比如“左”，“右”，“跳”就是三维的action，可能的输出为每个动作对应的概略，例如$[0.1,0.2,0.7]$），比如头上有一个金币的时候就应该倾向于往上跳,所以此时往上跳的概率应该比较大。通过调整策略参数，让好的action有更大的概率，从而获得更多的奖励。</p>
+<div id="动作价值函数" class="anchor"></div>
+<h2 class="relative group">动作价值函数 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%8a%a8%e4%bd%9c%e4%bb%b7%e5%80%bc%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>我们用动作价值函数\</p>
+<blockquote>
+<p>$Q_\pi(s_t,a_t)=E_{S_{t+1},A_{t+1},S_{t+2},A_{t+2},\dots} [U_t|S_t=s_t,A_t=a_t]$</p>
+</blockquote>
+<p>动作价值函数评价了当我们面对一个状态$s_t$时作出动作$a_t$这个行为的好坏。通过定义可以看出，我们唯一能确定的就是t时刻的状态和动作，即$S_t=s_t,A_t=a_t$。而评价的方式就看折扣回报的期望。但由于后序时刻的状态和动作都不确定，所以该期望是在随机变量$S_{t+1}$和$A_{t+1}$的基础上确定的。再者，由于action的选取是和策略函数有关，所以Q也和$\pi$函数有关。</p>
+<div id="状态价值函数" class="anchor"></div>
+<h2 class="relative group">状态价值函数 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%8a%b6%e6%80%81%e4%bb%b7%e5%80%bc%e5%87%bd%e6%95%b0" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>状态价值函数是对状态打分。在马里奥的例子中，如果都快掉到坑底了，那么这个状态应该是一个比较坏的状态，如果是马上吃到了金币，那这是一个比较好的状态。状态价值函数定义如下</p>
+<blockquote>
+<p>$V_\pi(s_t)=E_{A_t,S_{t+1},A_{t+1},S_{t+2},A_{t+2},\dots}[U_t|S_t=s_t]$</p>
+</blockquote>
+<p>也就是说在t时刻，能确定的只有目前的状态$s_t$，而具体的action是不知道的，所以对我们的期望来说，t时刻的动作也是一个随机变量，也就是$A_t$。
+和上文的$Q_\pi(s_t,a_t)$相比，期望仅仅是多了一项$A_t$。把$V_\pi(s_t)$和$Q_\pi(s_t,a_t)$相比较可以得到以下公式:</p>
+<blockquote>
+<p>$V_\pi(s_t)=E_{A_t\sim\pi(\cdot|s_t)}[Q_\pi(s_t,a_t)]$</p>
+</blockquote>
+<div id="蒙特卡洛方法" class="anchor"></div>
+<h2 class="relative group">蒙特卡洛方法 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%92%99%e7%89%b9%e5%8d%a1%e6%b4%9b%e6%96%b9%e6%b3%95" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>对于随机变量$X$,我们并不知道它的具体形式，包括期望和方差，也就没法从理论方面来求它的期望和方差。但是根据大数定律，$X$的样本均值$\frac{1}{n}\sum_{i=1}^n x_i$在$n \to \infty$的情况下会收敛到$X$的期望$E(X)$。通俗一点来说，就像是扔硬币，只要你扔的次数够多，那么得到正面的概率就会越来越趋近于0.5。在MDP中的随机变量是非常复杂的，我们非常难求到期望，我们就可以使用蒙特卡洛方法，暴力重复实验，只要我重复的次数够多，那么我得到的样本的均值就可以趋近于这些复杂的随机变量的期望。蒙特卡洛方法是DRL的灵魂，DRL只要有求期望，那么大概率是由蒙特卡洛方法来暴力趋近。</p>
+<div id="价值学习" class="anchor"></div>
+<h1 class="relative group">价值学习 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%bb%b7%e5%80%bc%e5%ad%a6%e4%b9%a0" aria-label="Anchor">#</a></span>        
+    
+</h1>
+<p>现在我们知道$Q_\pi(s_t,a_t)$函数可以评价我们的action的好坏，所以如果我们能在每一次在执行动作之前，我们可以计算每个动作的动作价值函数（反正能执行的动作个数是有限的），然后选出能让Q函数最大的那个动作。每次都做最好的动作就可以得到最好的结果。</p>
+<div id="dqn算法" class="anchor"></div>
+<h2 class="relative group">DQN算法 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#dqn%e7%ae%97%e6%b3%95" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>在状态数目有限的情况下，我们可以通过动态规划来得到Q函数，但很多时候状态是无限个的（例如马里奥和金币的距离: 1, 0.99, 0.98&hellip;.都可以看作是一个状态，状态数目当然是无限多的），所以我们用一个深度神经网络(DNN)来近似Q函数。DNN的输入是面临的状态，输出是多维的，分别对应每个action的动作价值。这个网络就是Deep Q Network(DQN)。</p>
+<p>在DQN中，我们的决策方式是把状态$s_t$输入DQN网络，DQN网络会给每个action打分，我们只是简单的选取得分最高的action。理论上来说只要DQN打分准确，我们就可以开挂，在动作发生之前就预测到了动作的结果。</p>
+<p>回想一下策略函数$\pi$，他输出每个action被选取的概率，也就是说每个action都是有可能被选到的，这样可以保证我们对每种情况的探索。但是在DQN算法中，我们并不依赖$\pi$函数，而且每次都是选得分最高的action。这样会导致一个问题，在DQN训练的初期，可能某个实际上不好的action的得分会超过其他的action，那么DQN就会执行这个action，而减少了对其他action的探索。这个道理就像是你去餐馆吃饭，最开始的时候吃了一个好吃的菜，然后你每次都吃这个菜。但由于你没有去尝试其他的菜，所以很有可能你吃到的并不是餐馆里最好吃的菜。</p>
+<p>因此，我们在DQN中加入参数$\epsilon$（可能是0.05），他是一个很小的值。在实际实现中，我们有$1-\epsilon$的几率来执行DQN最大值的动作，有$\epsilon$的概率来执行一个随机的动作，以此来保证对情况的充分探索。而$\epsilon$也会随着时间推移而减少。</p>
+<div id="td-error" class="anchor"></div>
+<h3 class="relative group">TD error 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#td-error" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>我们可以先玩一把游戏，然后通过计算所有$(s_t,a_t)$对应的$u_t$，然后来训练DQN。但是这样做又一些问题：首先，很多情况下过程并没有结束的状态，例如flappy bird的游戏，只要你足够强，游戏就不会结束。第二点，即使对于可以结束的游戏，也要打完一把才能训练一次，这样的效率过于低下。</p>
+<p>所以我们使用时间查分(Temporal Difference)的方法来解决上述的问题。想想这个例子，你要去上班，出门之前你预测今天需要1个小时。然后当你走到地铁站的时候你预测还需要30分钟。按理来说你花了30分钟到地铁站，然而实际上你只花了20分钟。这儿就有了个差距。由于越接近公司，你的预测肯定越来越准确。所以可以认为后一次的预测更加的准确，因为后一次的预测里面有一些实际的成分（你实际花了20分钟从家到地铁站）。所以出门的时候预测要花50分钟就会更加准确。</p>
+<p>根据最优贝尔曼方程</p>
+<blockquote>
+<p>$Q_<em>(s_t,a_t) = E_{S_{t+1}\sim p(\cdot|s_t,a_t)}[R_t+\gamma \max Q_</em>(S_{t+1},A)|S_t=s_t,A_t=a_t]$</p>
+</blockquote>
+<p>其中$Q_*(s_t,a_t) = \max_{a \in A} Q(s_t,a)$。而 $p(\cdot|s_t,a_t)$是确定$s_t$和$a_t$的情况下，可能得到的状态的状态的分布，并不是很重要的东西。按照蒙特卡洛的方法我们在t时刻的样本值</p>
+<blockquote>
+<p>$\hat{q_t} \approx r_t + \max_{a \in A} Q(s_{t+1},a)$</p>
+</blockquote>
+<p>翻译一下这个公式，可以看成是在$s_t$情况下$a_t$的一个采样，采样后得到$R_t$的样本值$r_t$，$S_{t+1}$也变成确定的$s_{t+1}$。而$\hat{q_t}=Q_*(s_t,a_t)$</p>
+<p>我们可以基于$s_{t+1}$再做一次预测得到$\hat{q}&rsquo;=Q_*(s_{t+1},a_{t+1})$。如果我们有一个完美的DQN，那么就有$\hat{q_t} \approx r_t + \gamma \hat{q_{t+1}}$。</p>
+<p>类比上班的例子，就是让上班时间的两次预测的差值和实际的从家到地铁站的时间接近。
+因此训练DQN的目标就是减少$J_w=\frac{1}{2}[(\hat{q_t} - \gamma \hat{q}&rsquo;)- r_t ]^2$。注意$\hat{q}&rsquo;$是一个参考值，只是一个值，并不参与梯度的计算。
+现在我们可以得到梯度:</p>
+<blockquote>
+<p>$\triangledown_wJ = (\hat{q_t} - r_t - \gamma \hat{q}&rsquo;)\triangledown_wQ(s_t,a_t)$</p>
+</blockquote>
+<div id="replay-buffer" class="anchor"></div>
+<h3 class="relative group">replay buffer 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#replay-buffer" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>在实际的DQN使用中，可以通过使用replay buffer来加快学习的效率。replay buffer主要的想法就是在获得关键的数据的时候，不要立即学习，而是保存起来到后面随机抽取一些四元组来学习。这样做有一些好处，首先抽取到的四元组是独立的，四元组之间不一定有什么关联。所以最好有一个很大的buffer，抽到的四元组之间才能更趋于独立。其次，这样可以保证每次都有足够的数据来训练，如果不用buffer，每次和环境交互以后只能得到一条数据，训练效果不好。</p>
+<p>每次当DQN看到一个状态$s_t$以后，就会计算action的概率，选择概率最大的$a_t$，然后和环境交互，环境的状态变成了$s_{t+1}$，并得到了奖励$r_t$,这时得到了一个四元组$(s_t,a_t,r_t,s_{t+1})$。我们把四元组保存在replay buffer中。随机从buffer中抽出一些四元组，按照DQN的方法来更新模型。</p>
+<div id="prioritized-replay-buffer" class="anchor"></div>
+<h3 class="relative group">prioritized replay buffer 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#prioritized-replay-buffer" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>上节里面replay buffer中随机抽取四元组的方法可能并不能达到最好的效果，因为不同的四元组的状态是不同的。就比如超级玛丽中，第一关中的状态很容易出现，在多次的游戏中DQN会经常遇到这样的状态并让自己学习到在这样的状态下如何得到高分。但是后面关卡中或者是一些隐藏的关卡就很难遇到，更不要</p>
+<p>锚点 = <a href="#td-error"  >
+    内容</a></p>
+<div id="dqn的问题" class="anchor"></div>
+<h3 class="relative group">DQN的问题 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#dqn%e7%9a%84%e9%97%ae%e9%a2%98" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>bootstraping</p>
+<div id="policy-gradient" class="anchor"></div>
+<h2 class="relative group">Policy Gradient 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#policy-gradient" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<div id="dqn优化策略" class="anchor"></div>
+<h3 class="relative group">DQN优化策略 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#dqn%e4%bc%98%e5%8c%96%e7%ad%96%e7%95%a5" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<div id="actor-critic" class="anchor"></div>
+<h2 class="relative group">actor critic 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#actor-critic" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<div id="ddpg" class="anchor"></div>
+<h2 class="relative group">DDPG 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ddpg" aria-label="Anchor">#</a></span>        
+    
+</h2>
+
+        </div>
+                
+        
+
+        
+
+          
+      </div>
+     
+     <script>
+        var oid = "views_posts\/DRL.md"
+        var oid_likes = "likes_posts\/DRL.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/paperreading/mrte/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >(ICNP'20) A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering 阅读笔记</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-11-03 21:30:52 &#43;0800 CST">3 November 2021</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2023
+      Your name here
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.35c1113bcc16c5a59bf031082f9e63822aa95280423881a7847a7ff33a16e6299ce6a840d9ef4e10d947e030a18f3f20359afb2ec0f35967484b9a9360ac3145.js" integrity="sha512-NcERO8wWxaWb8DEIL55jgiqpUoBCOIGnhHp/8zoW5imc5qhA2e9OENlH4DChjz8gNZr7LsDzWWdIS5qTYKwxRQ=="></script>
+  
+  
+</footer><div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://ryanyux.github.io"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

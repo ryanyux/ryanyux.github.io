@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reinforcement Learning on Blowfish</title>
+    <link>https://ryanyux.github.io/categories/reinforcement-learning/</link>
+    <description>Recent content in Reinforcement Learning on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Your name here</copyright>
+    <lastBuildDate>Mon, 11 Apr 2022 15:49:59 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/categories/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[ICNP&#39;21] Is Machine Learning Ready for Traffic Engineering Optimization? 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/marlgnn/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/marlgnn/</guid>
+      <description>文章背景 # 目前的TE解决方案中，比较常见的方式是预先计算节点到节点之间的多条路径，然后在这些路径上调整分流比例。而该文章中，作者采用的方式则是与OSPF进行结合。文章提出的方法是通过强化学习 + GNN的方式来调整链路的权重，然后让OSPF按照自己的方式，根据链路权重和Dijkstra算法来计算路径。</description>
+      
+    </item>
+    
+    <item>
+      <title>[Computer Network&#39;21]ScaleDRL: A Scalable Deep Reinforcement Learning Approach for Traffic Engineering in SDN with Pinning Control 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/scaledrl/</link>
+      <pubDate>Mon, 07 Mar 2022 17:04:29 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/scaledrl/</guid>
+      <description>文章背景 # 目前的流量工程中，主要的目标就是降低整个网络中最大的链路利用率，也就是将流量分摊到整个网络中。在目前的基于深度强化学习(DRL)的解决方案中，有一些是调整路由的路径，又一些是调整流量在不同路径上的分割比例。</description>
+      
+    </item>
+    
+    <item>
+      <title>(TON&#39;20)Traffic Engineering in Partially Deployed Segment Routing Over IPv6 Network With Deep Reinforcement Learning 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/wa-srte/</link>
+      <pubDate>Mon, 06 Dec 2021 17:05:58 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/wa-srte/</guid>
+      <description>📝文章背景 # 跟 SRID中的情形类似，我们需要在网络的一些路由器中启用段路由的功能来实现流量工程(Traffic Engineering,TE)，也就是将链路的负荷在整个网络中进行分担。</description>
+      
+    </item>
+    
+    <item>
+      <title>(TON&#39;21)Optimal Deployment of SRv6 to Enable Network Interconnection Service阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/srid/</link>
+      <pubDate>Thu, 02 Dec 2021 09:34:54 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/srid/</guid>
+      <description>📝文章背景 # 目前，对于一些单位来说，如果要连接不同地区的网络一般有几个方法。一是租用专线，这样比较安全也比较贵。二是用 MPLS来建立VPN，但MPLS需要保存大量的信息。再者就是用IPSec来进行封装，但是不支持流量工程(在不同路径上分配流量，以避免某些链路过于拥塞)。 Fig.</description>
+      
+    </item>
+    
+    <item>
+      <title>(INFOCOM&#39;21)DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/drlor/</link>
+      <pubDate>Wed, 10 Nov 2021 15:20:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/drlor/</guid>
+      <description>针对的问题 # 在传统的网络路由的算法中，路由对flow的处理方式通常是基于最短的跳数或者是链路的权重来计算如何路由，但是这种方式并不能对不同类型的flow进行区别对待。在 DRL-OR文章中，作者提出了4种基本的flow的类型，如下所示。</description>
+      
+    </item>
+    
+    <item>
+      <title>(ICNP&#39;20) A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/mrte/</link>
+      <pubDate>Wed, 03 Nov 2021 21:30:52 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/mrte/</guid>
+      <description>基本思路 # 在现在的基于深度强化学习(Deep Reinforcement Learning,DRL)模型的流量工程(Traffic Engineering,TE)中，我们需要让AI来学习网络中的某些特征，并实现对网络中的流量有一个合理的调度,让整个网络的总体有个好的性能。 文章通过DRL来学习如何让flow在不同的路径(path)中有一个合理的分配比例，从而提高网络性能。</description>
+      
+    </item>
+    
+    <item>
+      <title>Deep Reinforce Learning强化学习笔记</title>
+      <link>https://ryanyux.github.io/posts/drl/</link>
+      <pubDate>Mon, 25 Oct 2021 12:45:53 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/drl/</guid>
+      <description>基本模型 # 在机器学习的大类中，有一类学习过程需要和环境进行互动，在互动的过程中得到环境的反馈，而AI要做的事情就是通过学习来尽可能的得到更好的反馈。比如说让AI玩超级玛丽，在超级玛丽中，AI吃到金币得到好的反馈，碰到蘑菇怪🍄就会得到坏的反馈。而AI要做的就是学习如何看到一个画面的时候作出好的决定。其实过程和人类完游戏也差不多。</description>
+      
+    </item>
+    
+  </channel>
+</rss>
