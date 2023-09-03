@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>八股文 on Ryan&#39;s blog</title>
+    <link>https://ryanyux.github.io/series/%E5%85%AB%E8%82%A1%E6%96%87/</link>
+    <description>Recent content in 八股文 on Ryan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sun, 03 Sep 2023 22:00:03 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/series/%E5%85%AB%E8%82%A1%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机网络</title>
+      <link>https://ryanyux.github.io/posts/notes/networks/</link>
+      <pubDate>Sun, 03 Sep 2023 22:00:03 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/notes/networks/</guid>
+      <description>三次握手和四次挥手过程</description>
+      
+    </item>
+    
+  </channel>
+</rss>

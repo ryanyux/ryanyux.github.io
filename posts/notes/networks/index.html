@@ -8,16 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Posts &middot; Ryan&#39;s blog</title>
-  <meta name="title" content="Posts &middot; Ryan&#39;s blog" />
+  <title>计算机网络 &middot; Ryan&#39;s blog</title>
+  <meta name="title" content="计算机网络 &middot; Ryan&#39;s blog" />
   
   
   
   
   
-  <link rel="canonical" href="https://ryanyux.github.io/posts/" />
-  
-  <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Ryan's blog" />
+  <link rel="canonical" href="https://ryanyux.github.io/posts/notes/networks/" />
   
   
   
@@ -63,18 +61,48 @@
   
   
   
-  <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ryanyux.github.io/posts/" />
+  <meta property="og:title" content="计算机网络" />
+<meta property="og:description" content="三次握手和四次挥手过程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ryanyux.github.io/posts/notes/networks/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-03T22:00:03+08:00" />
+<meta property="article:modified_time" content="2023-09-03T22:00:03+08:00" />
+
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="计算机网络"/>
+<meta name="twitter:description" content="三次握手和四次挥手过程"/>
 
   
-  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "计算机网络",
+    "headline": "计算机网络",
+    
+    "abstract": "三次握手和四次挥手过程",
+    "inLanguage": "en",
+    "url" : "https:\/\/ryanyux.github.io\/posts\/notes\/networks\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Ryan"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-09-03T22:00:03\u002b08:00",
+    "datePublished": "2023-09-03T22:00:03\u002b08:00",
+    
+    "dateModified": "2023-09-03T22:00:03\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "107"
+  }]
+  </script>
+
 
   
   
@@ -437,10 +465,13 @@
       
 
 
-
-
-
-
+<article>
+  
+  
+  
+  
+  
+  
 
 
 <div id="hero" class="h-[150px] md:h-[200px]"></div>
@@ -468,11 +499,74 @@
     });
 </script>
 
- <header>
   
-  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Posts</h1>
-  <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
     
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >Ryan&#39;s blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/notes/networks/"
+      >计算机网络</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      计算机网络
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -497,565 +591,310 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
+  <time datetime="2023-09-03 22:00:03 &#43;0800 CST">3 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>107 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="views_posts/notes/networks.md" title="views">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="likes_posts/notes/networks.md" title="likes">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span><span class="px-2 text-primary-500">&middot;</span><span>
+    <button id="likes_button"
+        class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+        onclick="process_article()">
+        <span id="likes_button_heart" style="display:none" class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+ </span>
+        <span id="likes_button_emtpty_heart" class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
+  </span>
+
+</span>
+        <span id="likes_button_text">&nbsp;Like</span>
+    </button>
+</span>
+  
+
+  
+  
 </div>
 
 
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+<div class="flex">
+  
+  
+  
+  
+  <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+    alt="Ryan" src="/img/blowfish_logo.png" />
+  
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Ryan
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
   </div>
-  <script>
-    var oid = "views_"
-    var oid_likes = "likes_"
-  </script>
+</div>
+    
+
+    
+    
+    
+
+    
+
+    
+    <div class="mb-5"></div>
+    
   
-  
-  <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
   </header>
-  <section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    <div class="min-w-0 min-h-0 max-w-prose">
-      
+    
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5" >
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        八股文 - This article is part of a series.
+    </summary>
+    
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part : This Article
     </div>
-   
-
-
-
-  </section>
-  
-
-    
     
     
 
+</details>
+
+
+
+        <div class="max-w-prose mb-20">
+          <blockquote>
+<p>三次握手和四次挥手过程</p>
+</blockquote>
+<p>
+
+
+
+
+  <figure>
+    <img class="my-0 rounded-md" src="https://images2015.cnblogs.com/blog/816045/201611/816045-20161105220355065-482198403.png" alt="asdfs" />
     
+  </figure>
 
-    <section class="space-y-10 w-full">
-      
-      
-      <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-        2021
-      </h2>
-      
-      
-      
+</p>
+<blockquote>
+<p>为什么三次握手是三次，四次挥手是四次？</p>
+</blockquote>
+<p>三次握手是确定双方都知道对方的起始序号. 如果server一开始就回复数据, client并不能确定是否有丢包.
+主要原因是当服务端收到客户端的 FIN 数据包后，服务端可能还有数据没发完，不会立即close。所以服务端会先将 ACK 发过去告诉客户端我收到你的断开请求了，但请再给我一点时间，这段时间用来发送剩下的数据报文，发完之后再将 FIN 包发给客户端表示现在可以断了。之后客户端需要收到 FIN 包后发送 ACK 确认断开信息给服务端。</p>
+<blockquote>
+<p>建立四次或者断开三次行吗？</p>
+</blockquote>
+<p>不能三次挥手: 服务器的回复可能丢包, 如果服务器收到FIN就关闭连接, 那么就无法重传.</p>
+<blockquote>
+<p>http和https的区别？</p>
+</blockquote>
+<p>http明文, 而https则会对数据进行加密
+https安全性如何实现？ssl/tls协议怎么实现加密的？</p>
+<p>客户端 -&gt; 服务器, 服务器 -&gt; 公钥 -&gt; 客户端
+客户端生成随机密钥(对称加密) -&gt; 服务器
+服务器用其私钥解密对称密钥
+双方用对称密钥加密通信(速度快)</p>
+<blockquote>
+<p>http1.0和http1.1的区别？vs http2.0</p>
+</blockquote>
+<p>http1.0每个请求都需要一个TCP连接, 由于TCP需要握手还有慢启动,导致速度快不起来. 而http1.1使用长连接, 一个TCP连接可以处理多个请求
+http1.1 每次需要上一个请求完成了才能进行下一个请求, 如果一个请求没有响应则会导致后续请求也无法发送
+http2.0: 可以一次性请求多个资源, 回复也不需要有序. 并且http2.0将头部和数据分开, 然后用二进制编码, 使其更有效率.
+http2.0中双方缓存了之前的头部, 新的请求只需要发送改变的头部部分, 减少冗余</p>
+<blockquote>
+<p>粘包和拆包</p>
+</blockquote>
+<p>要发送的数据小于TCP发送缓冲区的大小，TCP将多次写入缓冲区的数据一次发送出去，将会发生粘包；
+接收数据端的应用层没有及时读取接收缓冲区中的数据，将发生粘包；
+要发送的数据大于TCP发送缓冲区剩余空间大小，将会发生拆包；
+待发送数据大于MSS（最大报文长度），TCP在传输前将进行拆包。即TCP报文长度-TCP头部长度&gt;MSS。
+解决方案:数据包长度固定, 加入分隔符, 再增加一个头部来保存数据长度</p>
+<blockquote>
+<p>HTTP协议的特点？</p>
+</blockquote>
+<p>HTTP允许传输任意类型的数据。
+无状态。
+CS模式。
+HTTP报文格式</p>
+<p>请求行：包括请求方法，访问的资源URL，使用的HTTP版本。GET(获取)和POST(提交)是最常见的HTTP方法，除此以外还包括DELETE(删除)、HEAD(头部)、PUT(上传文档)。
+请求头：格式为“属性名:属性值”，服务端根据请求头获取客户端的信息，主要有cookie、host、connection、accept-language、accept-encoding、user-agent。
+请求体：用户的请求数据如用户名，密码等。</p>
+<blockquote>
+<p>HTTP常用响应码</p>
+</blockquote>
+<p>200: 成功
+301: 永久移动
+302: 临时移动, 原URL依然可用
+404: 找不到
+405: 禁止请求的方法
+500: 服务器内部错误</p>
+<blockquote>
+<p>ping vs traceroute</p>
+</blockquote>
+<p>ping: 通过构造ICMP包发送给目标主机, 目标主机收到以后回复ICMP, 以此来判断目标主机是否能收到网络包
+traceroute: 构造不同TTL(IP中的字段)的UCP包, 当TTL为0时, 路由器会返回一个ICMP包来报告错误. 这样就知道了源节点到目的节点的中间节点.</p>
+<blockquote>
+<p>网络接收流程</p>
+</blockquote>
+<p>程序recv等待收到数据
+OS挂起程序
+网卡收到数据, 通过DMA写入内存
+网卡发起中断, CPU读取中断, 写入socket, 并将程序放入工作队列,等待CPU运行</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/posts/transnetwork/">
-    
+        </div>
+                
         
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/background.jpg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/transnetwork/">计算机网络领域的英文白话对照</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2021-11-11 07:49:42 &#43;0800 CST">11 November 2021</time><span class="px-2 text-primary-500">&middot;</span><span>83 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        八股文 - This article is part of a series.
+    </summary>
     
-    <span id="views_posts/TransNetwork.md" title="views">0</span> 
     
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_posts/TransNetwork.md" title="likes">0</span> 
     
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-      </div>
-      
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part : This Article
     </div>
-  </a>
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/posts/paperreading/drlor/">
     
+    
+
+</details>
+
+
         
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/background.jpg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/paperreading/drlor/">(INFOCOM'21)DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements 阅读笔记</div>
-        
-        
-        
+
+          
       </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2021-11-10 15:20:07 &#43;0800 CST">10 November 2021</time><span class="px-2 text-primary-500">&middot;</span><span>146 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_posts/paperreading/DRLOR.md" title="views">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_posts/paperreading/DRLOR.md" title="likes">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-      </div>
-      
-    </div>
-  </a>
+     
+     <script>
+        var oid = "views_posts\/notes\/networks.md"
+        var oid_likes = "likes_posts\/notes\/networks.md"
+      </script>
       
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/posts/paperreading/mrte/">
-    
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/background.jpg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/paperreading/mrte/">(ICNP'20) A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering 阅读笔记</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
   
-  
-  <time datetime="2021-11-03 21:30:52 &#43;0800 CST">3 November 2021</time><span class="px-2 text-primary-500">&middot;</span><span>118 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_posts/paperreading/MRTE.md" title="views">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_posts/paperreading/MRTE.md" title="likes">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-      </div>
-      
-    </div>
-  </a>
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a class="flex flex-wrap article " href="/posts/drl/">
-    
-        
-        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/img/background.jpg);"></div>
-        
-      <div class=" mt-3 md:mt-0">
-      <div class="items-center text-xl font-semibold">
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/drl/">Deep Reinforce Learning强化学习笔记</div>
-        
-        
-        
-      </div>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2021-10-25 12:45:53 &#43;0800 CST">25 October 2021</time><span class="px-2 text-primary-500">&middot;</span><span>130 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_posts/DRL.md" title="views">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_posts/DRL.md" title="likes">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-
-
-
-
-
-      </div>
-      
-    </div>
-  </a>
-      
-      
     </section>
+  <footer class="pt-8 max-w-prose print:hidden">
 
     
-
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/leetcode/741/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >741. 摘樱桃</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-09-02 11:06:03 &#43;0800 CST">2 September 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
   
 
-    <ul class="flex flex-row mt-8 justify-center">
-    <li>
-      <a
-          href="/posts/page/2/"
-          class="mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          rel="prev"
-      >&larr;</a>
-    </li>
-    <li>
-          <a
-              href="/posts/"
-              class=" mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          >1</a>
-      </li><li>
-          <a
-              href="/posts/page/2/"
-              class=" mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          >2</a>
-      </li><li>
-          <a
-              href="/posts/page/3/"
-              class="
-          bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
-         mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-          >3</a>
-      </li>
-  </ul>
 
-  
-      
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
