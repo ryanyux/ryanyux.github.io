@@ -62,7 +62,7 @@
   
   
   <meta property="og:title" content="计算机网络" />
-<meta property="og:description" content="三次握手和四次挥手过程" />
+<meta property="og:description" content="为什么三次握手是三次?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ryanyux.github.io/posts/notes/networks/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-09-03T22:00:03+08:00" />
@@ -72,7 +72,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="计算机网络"/>
-<meta name="twitter:description" content="三次握手和四次挥手过程"/>
+<meta name="twitter:description" content="为什么三次握手是三次?"/>
 
   
   <script type="application/ld+json">
@@ -83,7 +83,7 @@
     "name": "计算机网络",
     "headline": "计算机网络",
     
-    "abstract": "三次握手和四次挥手过程",
+    "abstract": "为什么三次握手是三次?",
     "inLanguage": "en",
     "url" : "https:\/\/ryanyux.github.io\/posts\/notes\/networks\/",
     "author" : {
@@ -99,7 +99,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "107"
+    "wordCount": "98"
   }]
   </script>
 
@@ -591,7 +591,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-09-03 22:00:03 &#43;0800 CST">3 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>107 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-09-03 22:00:03 &#43;0800 CST">3 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>98 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/notes/networks.md" title="views">0</span> 
     
@@ -727,44 +727,43 @@
 
         <div class="max-w-prose mb-20">
           <blockquote>
-<p>三次握手和四次挥手过程</p>
+<p>为什么三次握手是三次?</p>
 </blockquote>
-<p>
-
-
-
-
-  <figure>
-    <img class="my-0 rounded-md" src="https://images2015.cnblogs.com/blog/816045/201611/816045-20161105220355065-482198403.png" alt="asdfs" />
-    
-  </figure>
-
-</p>
+<p>两次握手下, client的第一个包超时, client会再发送一个包和server创建连接. 此时第一个包再来, 会导致server以为新开了一条连接.</p>
 <blockquote>
-<p>为什么三次握手是三次，四次挥手是四次？</p>
+<p>为什么四次挥手是四次？</p>
 </blockquote>
-<p>三次握手是确定双方都知道对方的起始序号. 如果server一开始就回复数据, client并不能确定是否有丢包.
-主要原因是当服务端收到客户端的 FIN 数据包后，服务端可能还有数据没发完，不会立即close。所以服务端会先将 ACK 发过去告诉客户端我收到你的断开请求了，但请再给我一点时间，这段时间用来发送剩下的数据报文，发完之后再将 FIN 包发给客户端表示现在可以断了。之后客户端需要收到 FIN 包后发送 ACK 确认断开信息给服务端。</p>
+<p>服务端收到FIN 数据包后，服务端可能还有数据没发完，不会立即close。所以服务端会先将 ACK 发过去告诉客户端我收到你的断开请求了，但请再给我一点时间.</p>
 <blockquote>
-<p>建立四次或者断开三次行吗？</p>
+<p>能不能<a href="https://www.51cto.com/article/717235.html"   target="_blank">
+    三次挥手</a>？</p>
 </blockquote>
-<p>不能三次挥手: 服务器的回复可能丢包, 如果服务器收到FIN就关闭连接, 那么就无法重传.</p>
+<p>三次挥手 = 第二次+第三次挥手一起发
+如果服务端有数据, 那么就四次挥手. 没有数据的话就会直接关闭连接.</p>
 <blockquote>
 <p>http和https的区别？</p>
 </blockquote>
-<p>http明文, 而https则会对数据进行加密
-https安全性如何实现？ssl/tls协议怎么实现加密的？</p>
-<p>客户端 -&gt; 服务器, 服务器 -&gt; 公钥 -&gt; 客户端
-客户端生成随机密钥(对称加密) -&gt; 服务器
-服务器用其私钥解密对称密钥
-双方用对称密钥加密通信(速度快)</p>
+<p>http明文, 而https则会对数据进行加密</p>
+<blockquote>
+<p>https安全性如何实现？ssl/tls协议怎么实现加密的？</p>
+</blockquote>
+<ul>
+<li>客户端用服务器<code>公钥</code>加密对称密钥</li>
+<li>服务器用<code>私钥</code>解密得到对称密钥</li>
+<li>双方使用对称加密通信(速度快)</li>
+</ul>
+<blockquote>
+<p>CA证书</p>
+</blockquote>
+<p>为了保证服务器公钥的正确性, 服务器会向CA机构申请证书. CA机构通过自己的私钥对服务器的<code>持有者信息</code>、<code>公钥加密</code>. 然后客户端利用CA机构公钥来解密证书, 然后进行对比.</p>
 <blockquote>
 <p>http1.0和http1.1的区别？vs http2.0</p>
 </blockquote>
-<p>http1.0每个请求都需要一个TCP连接, 由于TCP需要握手还有慢启动,导致速度快不起来. 而http1.1使用长连接, 一个TCP连接可以处理多个请求
-http1.1 每次需要上一个请求完成了才能进行下一个请求, 如果一个请求没有响应则会导致后续请求也无法发送
-http2.0: 可以一次性请求多个资源, 回复也不需要有序. 并且http2.0将头部和数据分开, 然后用二进制编码, 使其更有效率.
-http2.0中双方缓存了之前的头部, 新的请求只需要发送改变的头部部分, 减少冗余</p>
+<ul>
+<li>http1.0每个请求都需要<code>一个TCP连接</code>, 由于TCP需要<code>握手</code>还有<code>慢启</code>动,导致速度快不起来.</li>
+<li>http1.1使用<code>长连接</code>, 一个TCP连接可以处理多个请求,每次需要上一个请求完成了才能进行下一个请求, 如果一个请求没有响应则会导致后续请求也无法发送.</li>
+<li>http2.0: 可以一次性请求<code>多个资源</code>, 回复也不需要有序. 并且http2.0将头部和数据分开, 然后用二进制编码, 使其更有效率.http2.0中双方缓存了之前的头部, 新的请求只需要发送改变的头部部分, 减少冗余</li>
+</ul>
 <blockquote>
 <p>粘包和拆包</p>
 </blockquote>
@@ -786,17 +785,21 @@ HTTP报文格式</p>
 <blockquote>
 <p>HTTP常用响应码</p>
 </blockquote>
-<p>200: 成功
-301: 永久移动
-302: 临时移动, 原URL依然可用
-404: 找不到
-405: 禁止请求的方法
-500: 服务器内部错误</p>
+<ul>
+<li>200: 成功</li>
+<li>301: 永久移动</li>
+<li>302: 临时移动, 原URL依然可用</li>
+<li>404: 找不到</li>
+<li>405: 禁止请求的方法</li>
+<li>500: 服务器内部错误</li>
+</ul>
 <blockquote>
 <p>ping vs traceroute</p>
 </blockquote>
-<p>ping: 通过构造ICMP包发送给目标主机, 目标主机收到以后回复ICMP, 以此来判断目标主机是否能收到网络包
-traceroute: 构造不同TTL(IP中的字段)的UCP包, 当TTL为0时, 路由器会返回一个ICMP包来报告错误. 这样就知道了源节点到目的节点的中间节点.</p>
+<ul>
+<li>ping: 通过<code>构造ICMP包</code>发送给目标主机, 目标主机收到以后回复ICMP, 以此来判断目标主机是否能收到网络包</li>
+<li>traceroute: 构造<code>不同TTL</code>(IP中的字段)的UDP包, 当TTL为0时, 路由器会返回一个ICMP包来报告错误. 这样就知道了源节点到目的节点的中间节点.</li>
+</ul>
 <blockquote>
 <p>网络接收流程</p>
 </blockquote>
