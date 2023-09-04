@@ -62,7 +62,7 @@
   
   
   <meta property="og:title" content="计算机网络" />
-<meta property="og:description" content="为什么三次握手是三次?" />
+<meta property="og:description" content="五层协议 # 物理层" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ryanyux.github.io/posts/notes/networks/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-09-03T22:00:03+08:00" />
@@ -72,7 +72,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="计算机网络"/>
-<meta name="twitter:description" content="为什么三次握手是三次?"/>
+<meta name="twitter:description" content="五层协议 # 物理层"/>
 
   
   <script type="application/ld+json">
@@ -83,7 +83,7 @@
     "name": "计算机网络",
     "headline": "计算机网络",
     
-    "abstract": "为什么三次握手是三次?",
+    "abstract": "五层协议 # 物理层",
     "inLanguage": "en",
     "url" : "https:\/\/ryanyux.github.io\/posts\/notes\/networks\/",
     "author" : {
@@ -99,7 +99,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "98"
+    "wordCount": "164"
   }]
   </script>
 
@@ -591,9 +591,9 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-09-03 22:00:03 &#43;0800 CST">3 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>98 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-09-03 22:00:03 &#43;0800 CST">3 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>164 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_posts/notes/networks.md" title="views">0</span> 
+    <span id="views_posts/notes/networks/index.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -605,7 +605,7 @@
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_posts/notes/networks.md" title="likes">0</span> 
+    <span id="likes_posts/notes/networks/index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -700,7 +700,46 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#五层协议">五层协议</a></li>
+    <li><a href="#tcpudp">TCP/UDP</a></li>
+    <li><a href="#http">HTTP</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#五层协议">五层协议</a></li>
+    <li><a href="#tcpudp">TCP/UDP</a></li>
+    <li><a href="#http">HTTP</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -726,7 +765,72 @@
 
 
         <div class="max-w-prose mb-20">
-          <blockquote>
+          <div id="五层协议" class="anchor"></div>
+<h2 class="relative group">五层协议 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%ba%94%e5%b1%82%e5%8d%8f%e8%ae%ae" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<blockquote>
+<p>物理层</p>
+</blockquote>
+<p>对数据进行编码和解码</p>
+<blockquote>
+<p>链路层</p>
+</blockquote>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/notes/networks/image-1.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<ul>
+<li>将数据流封装成帧.</li>
+<li>用flag来标记帧的开始和结束, 让对方知道一个帧具体有哪些内容.</li>
+<li>用MAC地址来标记发送方和接收方</li>
+<li>提供纠错</li>
+</ul>
+<blockquote>
+<p>网络层</p>
+</blockquote>
+<ul>
+<li>负责将包发送到网络中的对应主机</li>
+<li>负责路由与转发</li>
+</ul>
+<blockquote>
+<p>传输层</p>
+</blockquote>
+<ul>
+<li>负责两个进程之间的通信</li>
+</ul>
+<div id="tcpudp" class="anchor"></div>
+<h2 class="relative group">TCP/UDP 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#tcpudp" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<blockquote>
 <p>为什么三次握手是三次?</p>
 </blockquote>
 <p>两次握手下, client的第一个包超时, client会再发送一个包和server创建连接. 此时第一个包再来, 会导致server以为新开了一条连接.</p>
@@ -740,6 +844,66 @@
 </blockquote>
 <p>三次挥手 = 第二次+第三次挥手一起发
 如果服务端有数据, 那么就四次挥手. 没有数据的话就会直接关闭连接.</p>
+<blockquote>
+<p>TCP拥塞控制</p>
+</blockquote>
+<p>通过控制拥塞窗口cwnd的大小来控制发送的速率, 从而既避免拥塞, 又能尽可能多的使用网络容量.</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/notes/networks/image.png"
+        alt="TCP拥塞控制"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<ul>
+<li>慢启动: cwnd从1开始, 每次收到一个ack后cwnd += 1. 总体呈<code>指数增长</code>.</li>
+<li>ssthresh: 慢启动阈值: cwnd达到ssthresh后开始<code>线性增长</code>.</li>
+<li>拥塞避免: cwnd 超过ssthresh后的状态.</li>
+<li>超时重传: ssthresh<code>减为一半</code>, cwnd变成<code>1</code>. 可以理解为TCP认为网络发生了严重的拥塞.</li>
+<li>快速重传: 当接收端收到乱序的包以后, 会发送ACK提醒前面的包还没有收到. 当发送方收到<code>三个冗余ACK</code>后认为网络轻度拥塞(接收方能收到包), 此时cwnd和ssthresh均变为<code>cwnd的一半</code>. 由于网络轻度拥塞, 不必激进的将cwnd调整为1.</li>
+</ul>
+<blockquote>
+<p>DNS解析</p>
+</blockquote>
+<p>基于UDP协议</p>
+<ul>
+<li>先在本地缓存查找, 没有的话请求<code>本地DNS</code>服务器</li>
+<li>本地DNS没有找到就会请求<code>根DNS</code>服务器</li>
+<li>根DNS服务器返回<code>下一级DNS</code>服务器地址</li>
+<li>本地DNS再请求下一级, 以此类推</li>
+</ul>
+<blockquote>
+<p>粘包和拆包</p>
+</blockquote>
+<p>要发送的数据小于TCP发送缓冲区的大小，TCP将多次写入缓冲区的数据一次发送出去，将会发生粘包；
+接收数据端的应用层没有及时读取接收缓冲区中的数据，将发生粘包；
+要发送的数据大于TCP发送缓冲区剩余空间大小，将会发生拆包；
+待发送数据大于MSS（最大报文长度），TCP在传输前将进行拆包。即TCP报文长度-TCP头部长度&gt;MSS。
+解决方案:数据包长度固定, 加入分隔符, 再增加一个头部来保存数据长度</p>
+<div id="http" class="anchor"></div>
+<h2 class="relative group">HTTP 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http" aria-label="Anchor">#</a></span>        
+    
+</h2>
 <blockquote>
 <p>http和https的区别？</p>
 </blockquote>
@@ -765,14 +929,6 @@
 <li>http2.0: 可以一次性请求<code>多个资源</code>, 回复也不需要有序. 并且http2.0将头部和数据分开, 然后用二进制编码, 使其更有效率.http2.0中双方缓存了之前的头部, 新的请求只需要发送改变的头部部分, 减少冗余</li>
 </ul>
 <blockquote>
-<p>粘包和拆包</p>
-</blockquote>
-<p>要发送的数据小于TCP发送缓冲区的大小，TCP将多次写入缓冲区的数据一次发送出去，将会发生粘包；
-接收数据端的应用层没有及时读取接收缓冲区中的数据，将发生粘包；
-要发送的数据大于TCP发送缓冲区剩余空间大小，将会发生拆包；
-待发送数据大于MSS（最大报文长度），TCP在传输前将进行拆包。即TCP报文长度-TCP头部长度&gt;MSS。
-解决方案:数据包长度固定, 加入分隔符, 再增加一个头部来保存数据长度</p>
-<blockquote>
 <p>HTTP协议的特点？</p>
 </blockquote>
 <p>HTTP允许传输任意类型的数据。
@@ -793,6 +949,15 @@ HTTP报文格式</p>
 <li>405: 禁止请求的方法</li>
 <li>500: 服务器内部错误</li>
 </ul>
+<blockquote>
+<p>cookie的作用</p>
+</blockquote>
+<p>HTTP协议本身没有状态.为了提供服务, 使用cookie来标记客户. 客户请求时带上cookie来表明自己的身份.</p>
+<blockquote>
+<p>长连接与短连接</p>
+</blockquote>
+<p>短连接: 一次HTTP连接后就关闭TCP连接
+长连接: HTTP头部使用keep-alive. 在打开网页后, TCP连接不会立即关闭, 而是会保持一段时间.</p>
 <blockquote>
 <p>ping vs traceroute</p>
 </blockquote>
@@ -836,8 +1001,8 @@ OS挂起程序
       </div>
      
      <script>
-        var oid = "views_posts\/notes\/networks.md"
-        var oid_likes = "likes_posts\/notes\/networks.md"
+        var oid = "views_posts\/notes\/networks\/index.md"
+        var oid_likes = "likes_posts\/notes\/networks\/index.md"
       </script>
       
       
@@ -880,6 +1045,28 @@ OS挂起程序
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/leetcode/300/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >最长递增子序列</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-09-04 13:56:44 &#43;0800 CST">4 September 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>

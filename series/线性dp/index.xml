@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线性DP on Ryan&#39;s blog</title>
+    <link>https://ryanyux.github.io/series/%E7%BA%BF%E6%80%A7dp/</link>
+    <description>Recent content in 线性DP on Ryan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 02 Sep 2023 11:06:03 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/series/%E7%BA%BF%E6%80%A7dp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>741. 摘樱桃</title>
+      <link>https://ryanyux.github.io/posts/leetcode/741/</link>
+      <pubDate>Sat, 02 Sep 2023 11:06:03 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/leetcode/741/</guid>
+      <description>741.</description>
+      
+    </item>
+    
+    <item>
+      <title>10. 正则表达式匹配</title>
+      <link>https://ryanyux.github.io/posts/leetcode/10/</link>
+      <pubDate>Fri, 01 Sep 2023 16:01:55 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/leetcode/10/</guid>
+      <description>分析 # 对于p中的字符, 可能出现3种情况: 小写字母, &amp;lsquo;.</description>
+      
+    </item>
+    
+    <item>
+      <title>678.有效的括号字符串</title>
+      <link>https://ryanyux.github.io/posts/leetcode/678/</link>
+      <pubDate>Thu, 31 Aug 2023 17:19:56 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/leetcode/678/</guid>
+      <description>对于一个字符串, 如果它是有效的, 那么就是2种情况:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

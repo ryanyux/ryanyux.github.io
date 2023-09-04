@@ -7,26 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sat, 02 Sep 2023 11:06:03 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>线性DP</title>
-      <link>https://ryanyux.github.io/tags/%E7%BA%BF%E6%80%A7dp/</link>
-      <pubDate>Sat, 02 Sep 2023 11:06:03 +0800</pubDate>
-      
-      <guid>https://ryanyux.github.io/tags/%E7%BA%BF%E6%80%A7dp/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>双指针</title>
-      <link>https://ryanyux.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-      <pubDate>Thu, 31 Aug 2023 17:19:56 +0800</pubDate>
-      
-      <guid>https://ryanyux.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-      <description></description>
-      
-    </item>
-    
+    <atom:link href="https://ryanyux.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
