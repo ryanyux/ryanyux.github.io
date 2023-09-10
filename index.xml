@@ -7,27 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Sun, 10 Sep 2023 10:32:39 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Go</title>
-      <link>https://ryanyux.github.io/posts/notes/go/</link>
-      <pubDate>Sun, 10 Sep 2023 10:32:39 +0800</pubDate>
-      
-      <guid>https://ryanyux.github.io/posts/notes/go/</guid>
-      <description>同步 # 条件变量 # 在生产者/消费者模式下使用同步锁, 生产者必须要占据这个锁.</description>
-      
-    </item>
-    
-    <item>
-      <title>操作系统</title>
-      <link>https://ryanyux.github.io/posts/notes/os/</link>
-      <pubDate>Sun, 10 Sep 2023 09:32:48 +0800</pubDate>
-      
-      <guid>https://ryanyux.github.io/posts/notes/os/</guid>
-      <description>内核态 vs 用户态</description>
-      
-    </item>
-    
+    <lastBuildDate>Mon, 04 Sep 2023 14:56:44 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>俄罗斯套娃信封问题</title>
       <link>https://ryanyux.github.io/posts/leetcode/354/</link>
@@ -45,16 +25,6 @@
       
       <guid>https://ryanyux.github.io/posts/leetcode/300/</guid>
       <description>O(n^2)方法 # 对于第i个元素, 我们可以遍历其前面的所有数, 然后找到比nums[i]小的数nums[j], 然后比较把nums[i]放在nums[j]之后的序列会不会更长一点.</description>
-      
-    </item>
-    
-    <item>
-      <title>计算机网络</title>
-      <link>https://ryanyux.github.io/posts/notes/networks/</link>
-      <pubDate>Sun, 03 Sep 2023 22:00:03 +0800</pubDate>
-      
-      <guid>https://ryanyux.github.io/posts/notes/networks/</guid>
-      <description>五层协议 # 物理层</description>
       
     </item>
     
