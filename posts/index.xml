@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copy, _right?_ :thinking_face:</copyright>
-    <lastBuildDate>Mon, 04 Sep 2023 14:56:44 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 10:32:39 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go</title>
+      <link>https://ryanyux.github.io/posts/notes/go/</link>
+      <pubDate>Sun, 10 Sep 2023 10:32:39 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/notes/go/</guid>
+      <description>同步 # 条件变量 # 在生产者/消费者模式下使用同步锁, 生产者必须要占据这个锁.</description>
+      
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>https://ryanyux.github.io/posts/notes/os/</link>
+      <pubDate>Sun, 10 Sep 2023 09:32:48 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/notes/os/</guid>
+      <description>内核态 vs 用户态</description>
+      
+    </item>
+    
     <item>
       <title>俄罗斯套娃信封问题</title>
       <link>https://ryanyux.github.io/posts/leetcode/354/</link>

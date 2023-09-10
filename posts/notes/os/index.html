@@ -8,16 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Series &middot; Ryan&#39;s blog</title>
-  <meta name="title" content="Series &middot; Ryan&#39;s blog" />
+  <title>操作系统 &middot; Ryan&#39;s blog</title>
+  <meta name="title" content="操作系统 &middot; Ryan&#39;s blog" />
   
   
   
   
   
-  <link rel="canonical" href="https://ryanyux.github.io/series/" />
-  
-  <link rel="alternate" type="application/rss+xml" href="/series/index.xml" title="Ryan's blog" />
+  <link rel="canonical" href="https://ryanyux.github.io/posts/notes/os/" />
   
   
   
@@ -63,18 +61,48 @@
   
   
   
-  <meta property="og:title" content="Series" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ryanyux.github.io/series/" />
+  <meta property="og:title" content="操作系统" />
+<meta property="og:description" content="内核态 vs 用户态" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ryanyux.github.io/posts/notes/os/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-10T09:32:48+08:00" />
+<meta property="article:modified_time" content="2023-09-10T09:32:48+08:00" />
+
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Series"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="操作系统"/>
+<meta name="twitter:description" content="内核态 vs 用户态"/>
 
   
-  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "操作系统",
+    "headline": "操作系统",
+    
+    "abstract": "内核态 vs 用户态",
+    "inLanguage": "en",
+    "url" : "https:\/\/ryanyux.github.io\/posts\/notes\/os\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Ryan"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-09-10T09:32:48\u002b08:00",
+    "datePublished": "2023-09-10T09:32:48\u002b08:00",
+    
+    "dateModified": "2023-09-10T09:32:48\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "136"
+  }]
+  </script>
+
 
   
   
@@ -437,10 +465,13 @@
       
 
 
-
-
-
-
+<article>
+  
+  
+  
+  
+  
+  
 
 
 <div id="hero" class="h-[150px] md:h-[200px]"></div>
@@ -468,13 +499,68 @@
     });
 </script>
 
- 
+  
+  
 
-  <header>
+  <header id="single_header" class="mt-5 max-w-prose">
     
-    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Series</h1>
-    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >Ryan&#39;s blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/notes/os/"
+      >操作系统</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      操作系统
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -505,9 +591,9 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <span>
+  <time datetime="2023-09-10 09:32:48 &#43;0800 CST">10 September 2023</time><span class="px-2 text-primary-500">&middot;</span><span>136 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_taxonomy_series" title="views">0</span> 
+    <span id="views_posts/notes/os/index.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -519,7 +605,7 @@
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_taxonomy_series" title="likes">0</span> 
+    <span id="likes_posts/notes/os/index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -553,96 +639,432 @@
     </button>
 </span>
   
+
+  
+  
 </div>
 
 
+
+
+
+
+
     </div>
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+<div class="flex">
+  
+  
+  
+  
+  <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+    alt="Ryan" src="/img/blowfish_logo.png" />
+  
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Ryan
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+    
+
+    
+    
+    
+
+    
+
+    
+    <div class="mb-5"></div>
+    
+  
   </header>
   
-  <script>
-    var oid = "views_taxonomy_series"
-    var oid_likes = "likes_taxonomy_series"
-  </script>
-  
-  
-  <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
-  
-
-  
-
-  <section class="flex flex-wrap max-w-prose -mx-2 overflow-hidden">
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-      <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
-    <h2 class="flex items-center">
-      <a
-        class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
-        href="/series/lis%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/"
-        >LIS最长递增子序列</a
-      >
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#死锁">死锁</a></li>
+    <li><a href="#进程间通信">进程间通信</a></li>
+    <li><a href="#进程状态">进程状态</a></li>
+    <li><a href="#内存管理">内存管理</a></li>
+    <li><a href="#线程池管理">线程池管理</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#死锁">死锁</a></li>
+    <li><a href="#进程间通信">进程间通信</a></li>
+    <li><a href="#进程状态">进程状态</a></li>
+    <li><a href="#内存管理">内存管理</a></li>
+    <li><a href="#线程池管理">线程池管理</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+   </div>
+      </div>
       
-        <span class="px-2 text-base text-primary-500">&middot;</span>
-        <span class="text-base text-neutral-400">
-          2
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5" >
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        八股文 - This article is part of a series.
+    </summary>
+    
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part : This Article
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="https://ryanyux.github.io/posts/notes/networks/">
+            Part : 计算机网络
+        </a>
+    </div>
+    
+    
+
+</details>
+
+
+
+        <div class="max-w-prose mb-20">
+          <blockquote>
+<p>内核态 vs 用户态</p>
+</blockquote>
+<ul>
+<li>内核态: 执行<code>特权指令</code>, 使用所有内存空间</li>
+<li>用户态: 不能执行特权指令, 只能运行在自己的空间</li>
+</ul>
+<blockquote>
+<p>内核态和用户态切换</p>
+</blockquote>
+<ul>
+<li>系统调用: 将中断号、参数放在寄存器, 再执行int 80中断</li>
+<li>异常: 文件异常, <code>缺页</code></li>
+<li>外中断: 网卡, 键盘</li>
+</ul>
+<blockquote>
+<p>进程</p>
+</blockquote>
+<ul>
+<li>PCB: PID、状态、程序和数据地址</li>
+<li>程序段</li>
+<li>数据段</li>
+</ul>
+<blockquote>
+<p>进程 vs 线程:</p>
+</blockquote>
+<ul>
+<li>进程: 最小的资源分配单位, 不能把某个资源分配给线程</li>
+<li>线程: 最小的CPU调度单位</li>
+</ul>
+<blockquote>
+<p>多线程模型</p>
+</blockquote>
+<ul>
+<li>主流使用<code>一对一模型</code>, 一个用户线程对应一个内核线程. 但是内核线程数目有限制</li>
+</ul>
+<div id="死锁" class="anchor"></div>
+<h2 class="relative group">死锁 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%ad%bb%e9%94%81" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<blockquote>
+<p>必要条件</p>
+</blockquote>
+<ul>
+<li>互斥: 一个资源只能给<code>一个</code>进程</li>
+<li>持有并等待: 进程等待资源时并未释放已有资源</li>
+<li>不可剥夺: 不能剥夺进程已有资源</li>
+<li>环路等待: 等待资源的进程形成了一个环</li>
+</ul>
+<blockquote>
+<p>避免死锁</p>
+</blockquote>
+<ul>
+<li>资源有序分配: 进程按照某个顺序, 先请求资源1, 再请求资源2&hellip;</li>
+</ul>
+<div id="进程间通信" class="anchor"></div>
+<h2 class="relative group">进程间通信 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%bf%9b%e7%a8%8b%e9%97%b4%e9%80%9a%e4%bf%a1" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<blockquote>
+<p>管道</p>
+</blockquote>
+<ul>
+<li>通过int pipe(int fd[2])调用来创建管道, fd[0]是读, fd[1]是写</li>
+<li>通过fork创建子进程, 子进程和父进程共享管道</li>
+<li>管道本质上是内核的一块<code>缓存区</code>(表示为文件)</li>
+</ul>
+<blockquote>
+<p>socket
+信号</p>
+</blockquote>
+<ul>
+<li>kill -9 就是发送SIGKILL命令</li>
+<li>程序中也可以注册函数来捕捉相应的信号. 例如收到退出信号后, 处理完当前任务再退出</li>
+</ul>
+<blockquote>
+<p>共享内存</p>
+</blockquote>
+<ul>
+<li>将同一块物理空间映射到2个进程的内存空间中</li>
+<li>避免其他方式那样的拷贝</li>
+</ul>
+<blockquote>
+<p>信号量</p>
+</blockquote>
+<ul>
+<li>本质上是一个原子化的整型计数器</li>
+<li>P操作: 信号量 -= 1, 如果结果&lt;0,说明<code>资源不够</code>, 进程需要<code>阻塞</code>等待</li>
+<li>V操作: 信号量 += 1, 如果结果&lt;=0, 说明有进程<code>请求资源不成功</code>, 序号进行唤醒.</li>
+</ul>
+<div id="进程状态" class="anchor"></div>
+<h2 class="relative group">进程状态 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%bf%9b%e7%a8%8b%e7%8a%b6%e6%80%81" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<ul>
+<li>
+<p>运行: 占据CPU</p>
+</li>
+<li>
+<p>就绪: 获得了除CPU以外的所有资源</p>
+</li>
+<li>
+<p>阻塞: 等待所需要的资源的情况</p>
+</li>
+<li>
+<p>就绪 -&gt; 执行: 获得CPU调度</p>
+</li>
+<li>
+<p>执行 -&gt; 就绪: 让出CPU给其他进程</p>
+</li>
+<li>
+<p>执行 -&gt; 阻塞: 等待资源, 等待锁</p>
+</li>
+<li>
+<p>阻塞 -&gt; 就绪: 获得了所需要的资源</p>
+</li>
+</ul>
+<div id="内存管理" class="anchor"></div>
+<h2 class="relative group">内存管理 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<blockquote>
+<p>虚拟地址 vs 物理地址</p>
+</blockquote>
+<ul>
+<li>物理地址: 数组在内存中的实际地址</li>
+<li>虚拟地址
+<ul>
+<li>为进程提供一个大的、连续的、私有的空间</li>
+<li>进程无需管理虚拟空间</li>
+<li>虚拟空间可以映射到任何地方: 内存、磁盘</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>页面置换算法</p>
+</blockquote>
+<ul>
+<li>FIFO: 先进先出</li>
+<li>LRU: 也可以理解为一个队列, 当一个页面被使用后, 被重新放入队列</li>
+</ul>
+<div id="线程池管理" class="anchor"></div>
+<h2 class="relative group">线程池管理 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0%e7%ae%a1%e7%90%86" aria-label="Anchor">#</a></span>        
+    
+</h2>
+
+        </div>
+                
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        八股文 - This article is part of a series.
+    </summary>
+    
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part : This Article
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="https://ryanyux.github.io/posts/notes/networks/">
+            Part : 计算机网络
+        </a>
+    </div>
+    
+    
+
+</details>
+
+
+        
+
+          
+      </div>
+     
+     <script>
+        var oid = "views_posts\/notes\/os\/index.md"
+        var oid_likes = "likes_posts\/notes\/os\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/leetcode/354/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >俄罗斯套娃信封问题</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-09-04 14:56:44 &#43;0800 CST">4 September 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
         </span>
-      
-    </h2>
-  </article>
-    
-      <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
-    <h2 class="flex items-center">
-      <a
-        class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
-        href="/series/%E5%85%AB%E8%82%A1%E6%96%87/"
-        >八股文</a
-      >
-      
-        <span class="px-2 text-base text-primary-500">&middot;</span>
-        <span class="text-base text-neutral-400">
-          2
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/notes/go/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Go</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-09-10 10:32:39 &#43;0800 CST">10 September 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
         </span>
-      
-    </h2>
-  </article>
-    
-      <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
-    <h2 class="flex items-center">
-      <a
-        class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
-        href="/series/%E7%BA%BF%E6%80%A7dp/"
-        >线性DP</a
-      >
-      
-        <span class="px-2 text-base text-primary-500">&middot;</span>
-        <span class="text-base text-neutral-400">
-          3
-        </span>
-      
-    </h2>
-  </article>
-    
-      <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
-    <h2 class="flex items-center">
-      <a
-        class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
-        href="/series/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"
-        >阅读笔记</a
-      >
-      
-        <span class="px-2 text-base text-primary-500">&middot;</span>
-        <span class="text-base text-neutral-400">
-          3
-        </span>
-      
-    </h2>
-  </article>
-    
-  </section>
-
+      </div>
+    </div>
   
 
 
+    
+  </footer>
+</article>
 
-      
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
