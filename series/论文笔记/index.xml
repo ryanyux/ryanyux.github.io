@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>论文笔记 on Ryan&#39;s blog</title>
+    <link>https://ryanyux.github.io/series/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 论文笔记 on Ryan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copy, _right?_ :thinking_face:</copyright>
+    <lastBuildDate>Sat, 03 Dec 2022 13:54:17 +0800</lastBuildDate><atom:link href="https://ryanyux.github.io/series/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[TON&#39;21] FlexDATE: Flexible and Disturbance-Aware Traffic Engineering With Reinforcement Learning in Software-Defined Networks思路记录</title>
+      <link>https://ryanyux.github.io/posts/paperreading/flexdate/</link>
+      <pubDate>Sat, 03 Dec 2022 13:54:17 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/flexdate/</guid>
+      <description>新的指标 # 不同于以往的以最大链路利用(Max Link Utilization, MLU)作为指标的方式.</description>
+      
+    </item>
+    
+    <item>
+      <title>[IWQoS&#39;21]DarkTE: Towards Dark Traffic Engineering in Data Center Networks with Ensemble Learning</title>
+      <link>https://ryanyux.github.io/posts/paperreading/darkte/</link>
+      <pubDate>Tue, 25 Oct 2022 11:59:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/darkte/</guid>
+      <description>1 背景 # mice流： 通常大小只有几KB的流 elephant流： 数据量很大，可以达到几个GB 1.</description>
+      
+    </item>
+    
+    <item>
+      <title>[arxiv&#39;21] Gemini: Practical Reconfigurable Datacenter Networks with Topology and Traffic Engineering</title>
+      <link>https://ryanyux.github.io/posts/paperreading/gemini/</link>
+      <pubDate>Fri, 21 Oct 2022 17:39:51 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/gemini/</guid>
+      <description>背景 # 目前比较普遍的数据中心网络(DCN) 采用的是Clos架构: 网络由多级组成，从下到上依次是ToR 交换机，pod，spine.</description>
+      
+    </item>
+    
+    <item>
+      <title>[ICNP&#39;21] Is Machine Learning Ready for Traffic Engineering Optimization? 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/marlgnn/</link>
+      <pubDate>Mon, 11 Apr 2022 15:49:59 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/marlgnn/</guid>
+      <description>文章背景 # 目前的TE解决方案中，比较常见的方式是预先计算节点到节点之间的多条路径，然后在这些路径上调整分流比例。而该文章中，作者采用的方式则是与OSPF进行结合。文章提出的方法是通过强化学习 + GNN的方式来调整链路的权重，然后让OSPF按照自己的方式，根据链路权重和Dijkstra算法来计算路径。</description>
+      
+    </item>
+    
+    <item>
+      <title>[ICNP&#39;21]Federated Traffic Engineering with Supervised Learning in Multi-region Networks 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/fedte/</link>
+      <pubDate>Tue, 29 Mar 2022 14:26:29 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/fedte/</guid>
+      <description>1 文章背景 # 目前的Traffic Engineering主要有两种方式：中心式和分布式。</description>
+      
+    </item>
+    
+    <item>
+      <title>[NSDI&#39;21]Cost-Effective Cloud Edge Traffic Engineering with CASCARA 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/cascara/</link>
+      <pubDate>Mon, 28 Mar 2022 10:43:42 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/cascara/</guid>
+      <description>1、背景 # 在目前的云方案中，每个云有很多个出口节点，连接不同的ISP。每个ISP根据链路的使用量来进行计费。具体的计费方式如下：</description>
+      
+    </item>
+    
+    <item>
+      <title>[SOSR&#39;21]Helix: Traffic Engineering for Multi-Controller SDN 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/helix/</link>
+      <pubDate>Tue, 22 Mar 2022 14:08:19 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/helix/</guid>
+      <description>1、文章背景 # 在目前的多控制器SDN中(MCSDN)，需要去维护多个控制器之间的一致性。如果是要维护强一致性(strong consistency)就需要产生大量的开销，而如果使用最终一致性(eventual consistency )则可能会导致controller基于过时的信息来作出决定。</description>
+      
+    </item>
+    
+    <item>
+      <title>[EuroSys&#39;14]WCMP: Weighted Cost Multipathing for Improved Fairness in Data Centers 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/wcmp/</link>
+      <pubDate>Mon, 14 Mar 2022 10:02:55 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/wcmp/</guid>
+      <description>1、文章背景 # ECMP的局限性 # 文章提出的WCMP算法就是基于多路径的ECMP算法的一些问题进行的改进。在ECMP算法中(图a)，从S10点到S12点会事先计算几条等价路径，然后把从S10点到S12点的所有流在这些路径上进行均匀的分配。 但是这样的做法有个问题：从S10到S20有两条链路，每条路径3个流，但是从S20到S12就只有一条链路，但上面却要挤6条流。不同link上流的数目差距很大。每个流能用的带宽下降，从而导致整体的性能下降。</description>
+      
+    </item>
+    
+    <item>
+      <title>[Computer Network&#39;21]ScaleDRL: A Scalable Deep Reinforcement Learning Approach for Traffic Engineering in SDN with Pinning Control 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/scaledrl/</link>
+      <pubDate>Mon, 07 Mar 2022 17:04:29 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/scaledrl/</guid>
+      <description>文章背景 # 目前的流量工程中，主要的目标就是降低整个网络中最大的链路利用率，也就是将流量分摊到整个网络中。在目前的基于深度强化学习(DRL)的解决方案中，有一些是调整路由的路径，又一些是调整流量在不同路径上的分割比例。</description>
+      
+    </item>
+    
+    <item>
+      <title>[INFOCOM&#39;21]Primus: Fast and Robust Centralized Routing for Large-scale Data Center Networks 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/primus/</link>
+      <pubDate>Fri, 04 Mar 2022 10:49:33 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/primus/</guid>
+      <description>背景 # 文章的主要目的在于目前的数据中心网络(DCN, Data Center Network)中路由的一些问题。</description>
+      
+    </item>
+    
+    <item>
+      <title>[TON&#39;20] Elmo: Source Routed Multicast for Public Clouds 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/elmo/</link>
+      <pubDate>Fri, 25 Feb 2022 09:50:04 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/elmo/</guid>
+      <description>文章背景📝 # 多播 vs 单播 (Multicast vs Unicast) # 在某些需要将相同内容发送给多个接收者的时候，例如网络直播或者是视频会议，可以选择传统的一对一方式，把同一份内容分成多分，分别发送给多个接收者，既单播(Unicast)。</description>
+      
+    </item>
+    
+    <item>
+      <title>(TON&#39;20)Traffic Engineering in Partially Deployed Segment Routing Over IPv6 Network With Deep Reinforcement Learning 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/wa-srte/</link>
+      <pubDate>Mon, 06 Dec 2021 17:05:58 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/wa-srte/</guid>
+      <description>📝文章背景 # 跟 SRID中的情形类似，我们需要在网络的一些路由器中启用段路由的功能来实现流量工程(Traffic Engineering,TE)，也就是将链路的负荷在整个网络中进行分担。</description>
+      
+    </item>
+    
+    <item>
+      <title>(TON&#39;21)Optimal Deployment of SRv6 to Enable Network Interconnection Service阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/srid/</link>
+      <pubDate>Thu, 02 Dec 2021 09:34:54 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/srid/</guid>
+      <description>📝文章背景 # 目前，对于一些单位来说，如果要连接不同地区的网络一般有几个方法。一是租用专线，这样比较安全也比较贵。二是用 MPLS来建立VPN，但MPLS需要保存大量的信息。再者就是用IPSec来进行封装，但是不支持流量工程(在不同路径上分配流量，以避免某些链路过于拥塞)。 Fig.</description>
+      
+    </item>
+    
+    <item>
+      <title>(INFOCOM&#39;21)DRL-OR: Deep Reinforcement Learning-based Online Routing for Multi-type Service Requirements 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/drlor/</link>
+      <pubDate>Wed, 10 Nov 2021 15:20:07 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/drlor/</guid>
+      <description>针对的问题 # 在传统的网络路由的算法中，路由对flow的处理方式通常是基于最短的跳数或者是链路的权重来计算如何路由，但是这种方式并不能对不同类型的flow进行区别对待。在 DRL-OR文章中，作者提出了4种基本的flow的类型，如下所示。</description>
+      
+    </item>
+    
+    <item>
+      <title>(ICNP&#39;20) A Multi-agent Reinforcement Learning Perspective on Distributed Traffic Engineering 阅读笔记</title>
+      <link>https://ryanyux.github.io/posts/paperreading/mrte/</link>
+      <pubDate>Wed, 03 Nov 2021 21:30:52 +0800</pubDate>
+      
+      <guid>https://ryanyux.github.io/posts/paperreading/mrte/</guid>
+      <description>基本思路 # 在现在的基于深度强化学习(Deep Reinforcement Learning,DRL)模型的流量工程(Traffic Engineering,TE)中，我们需要让AI来学习网络中的某些特征，并实现对网络中的流量有一个合理的调度,让整个网络的总体有个好的性能。 文章通过DRL来学习如何让flow在不同的路径(path)中有一个合理的分配比例，从而提高网络性能。</description>
+      
+    </item>
+    
+  </channel>
+</rss>
